@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--<img class="responsive-img" src="static/images/RedBackground.jpg" alt="">-->
+
+<img style="height: 400px; width: 100%; position: absolute;" src="static/images/RedBackground.jpg" alt="">
+
+
+<nav>
+    <div class="nav-wrapper" style="top: 20px">
+        <ul class="center hide-on-small-and-down" style="display: table; margin: 0 auto;">
+            <li><a style="font-size: 20px;" href="#">HOME</a></li>
+            <li><a style="font-size: 20px;" href="#">MEET THE TEAM</a></li>
+            <li class="hide-on-med-and-down"><img style="padding-left: 25px; padding-right: 25px;" src="static/images/UMRLogoWhite.png" alt=""></li>
+            <li><a style="font-size: 20px;" href="#">LUNABOTICS</a></li>
+            <li><a style="font-size: 20px;" href="#">CONTACT</a></li>
+        </ul>
+        <a href="#" class="sidenav-trigger hide-on-med-and-up" data-target="mobile-demo">
+            <i class="material-icons">menu</i>
+        </a>
+        <div class="nav-wrapper hide-on-small-only hide-on-large-only" style="text-align: center; top: -20%">
+            <img src="static/images/UMRLogoWhite.png" alt="">
+        </div>
+    </div>
+
+    <div class="nav-wrapper hide-on-small-and-down" style="text-align: center; top: 120%;">
+        <a href="#" style="font-family: Arial, Helvetica, sans-serif; font-size: 65px; font-weight: bold;">UMASS ROBOTICS</a>
+    </div>
+    <div class="nav-wrapper hide-on-med-and-up" style="text-align: center; top: 120%;">
+        <a href="#" style="font-family: Arial, Helvetica, sans-serif; font-size: 66px; font-weight: bold;">UMASS ROBOTICS</a>
+    </div>
+    <div class="nav-wrapper hide-on-small-only" style="text-align: center; top: 150%;">
+        <img src="static/images/UMassEngineering.png" style="width: 200px;" alt="">
+    </div>
+    <div class="nav-wrapper hide-on-med-and-up" style="text-align: center; top: 280%;">
+        <img src="static/images/UMassEngineering.png" style="width: 200px;" alt="">
+    </div>
+</nav>
+
+
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Meet the Team</a></li>
+    <li><a href="#">Lunabotics</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+<div style="height: 344px;"></div> <!-- To fill up the rest of the red space. -->
+
+
+<div>This is where our content will go.</div>
+
+<!-- Small black navbar for all pages besides HOME
+
+<nav class="black" style="height: 100px;">
+    <div class="nav-wrapper" style="top: 20px">
+      <ul class="center hide-on-med-and-down" style="display: table; margin: 0 auto;">
+          <li><a style="font-size: 20px;" href="#">HOME</a></li>
+          <li><a style="font-size: 20px;" href="#">MEET THE TEAM</a></li>
+          <li><img style="padding-left: 20px; padding-right: 25px;" src="static/images/UMRLogoWhite.png" alt=""></li>
+          <li><a style="font-size: 20px;" href="#">LUNABOTICS</a></li>
+          <li><a style="font-size: 20px;" href="#">CONTACT</a></li>
+      </ul>
+    </div>
+</nav>
+
+-->
+
+{% endblock %}
