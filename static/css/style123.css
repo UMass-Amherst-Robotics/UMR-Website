@@ -389,6 +389,10 @@ h2 {
         vertical-align: initial;
         margin-right: initial;
     }
+
+    #caption-separator {
+        height: 25px;
+    }
     
     #robot-picture-caption {
         text-align: center;
@@ -399,6 +403,7 @@ h2 {
         width: initial;
         font-size: 16px;
         font-family: Optima;
+        margin-top: 25px;
     }
 
     #non-right-card {
