@@ -307,7 +307,7 @@ h2 {
         width: 893px;
         margin: auto;
     }
-    
+
     #container2 {
         width: 744px;
         margin: auto;
@@ -340,7 +340,7 @@ h2 {
         position: relative;
         bottom: 15px;
     }
-    
+
     #container2 {
         width: 90%;
     }
@@ -378,7 +378,7 @@ h2 {
         text-align: center;
         width: initial;
     }
-    
+
     #lunabotics-logo {
         width: initial;
         vertical-align: initial;
@@ -387,7 +387,7 @@ h2 {
         width: 100%;
         float: right;
     }
-    
+
     #robot-picture {
         width: initial;
         display: initial;
@@ -398,11 +398,11 @@ h2 {
     #caption-separator {
         height: 25px;
     }
-    
+
     #robot-picture-caption {
         text-align: center;
     }
-    
+
     #lunabotics-description {
         display: initial;
         width: initial;
@@ -418,7 +418,7 @@ h2 {
         vertical-align: top;
         margin-bottom: 50px;
     }
-    
+
     #right-card {
         width: 100%;
         display: inline-block;
