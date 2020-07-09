@@ -8,6 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 
 const useStyles = makeStyles((theme) => ({
     root: {
+      position: 'relative',
       height: "550px",
       background: "#2C2C2C"
     },
@@ -23,6 +24,20 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 60,
         padding: "20px 20px 20px 0"
     },
+    menu_button: {
+        fontWeight: 'bold',
+    },
+    special_button: {
+        borderRadius: "1em",
+        backgroundColor: '#FFFFFF',
+        bottom: '20px',
+        right: '20px',
+        position: 'absolute',
+        color: '#9A1E1E',
+        fontWeight: 'bold',
+        height: '50px',
+        width: '150px'
+    },
   }));
 
 const Navbar = () => {
@@ -34,12 +49,13 @@ const Navbar = () => {
                 <AppBar elevation={0} position="fixed" className={classes.menubar}>
                     <Toolbar>
                             <img src="/umr-logo-white.png" alt="logo" className={classes.logo} />
-                            <Button color="inherit">HOME</Button>
-                            <Button color="inherit">ABOUT</Button>
-                            <Button color="inherit">CONTACT</Button>
-                            <Button color="inherit">SPONSORS</Button>
+                            <Button className={classes.menu_button} color="inherit">HOME</Button>
+                            <Button className={classes.menu_button} color="inherit">ABOUT</Button>
+                            <Button className={classes.menu_button} color="inherit">CONTACT</Button>
+                            <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
                     </Toolbar>
                 </AppBar>
+                <Button className={classes.special_button}>View Photos</Button>
             </div>
             <div className={classes.divider}></div>
         </div>
