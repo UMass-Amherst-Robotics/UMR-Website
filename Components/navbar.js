@@ -1,15 +1,16 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Toolbar from '@material-ui/core/Toolbar'
+import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
     root: {
       position: 'relative',
-      height: "550px",
+      height: "80px",
       background: "#2C2C2C"
     },
     menubar: {
@@ -21,23 +22,16 @@ const useStyles = makeStyles((theme) => ({
         background: "#9A1E1E"
     },
     logo: {
-        maxWidth: 60,
+        maxWidth: 70,
         padding: "20px 20px 20px 0"
     },
     menu_button: {
+        color: 'white',
         fontWeight: 'bold',
-    },
-    special_button: {
-        borderRadius: "1em",
-        backgroundColor: '#FFFFFF',
-        bottom: '20px',
-        right: '20px',
-        position: 'absolute',
-        color: '#9A1E1E',
-        fontWeight: 'bold',
-        height: '50px',
-        width: '150px'
-    },
+		fontSize: 20,
+		height: 80,
+		width: 170
+    }
   }));
 
 const Navbar = () => {
@@ -46,18 +40,17 @@ const Navbar = () => {
     return (
         <div>
             <div className={classes.root}>
-                <AppBar elevation={0} position="fixed" className={classes.menubar}>
+                <AppBar elevation={0} position="sticky" className={classes.menubar}>
                     <Toolbar>
-                            <img src="/umr-logo-white.png" alt="logo" className={classes.logo} />
-                            <Button className={classes.menu_button} color="inherit">HOME</Button>
-                            <Button className={classes.menu_button} color="inherit">ABOUT</Button>
-                            <Button className={classes.menu_button} color="inherit">CONTACT</Button>
-                            <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
+                            <img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' />
+                            <Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
+                            <Button className={classes.menu_button} color="inherit" href='/aboutus'>ABOUT US</Button>
+                            <Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
+                            <Button className={classes.menu_button} color="inherit" href='/sponsors'>SPONSORS</Button>
+                            <Button className={classes.menu_button} colot="inhereit" href='/donate'>DONATE</Button>
                     </Toolbar>
                 </AppBar>
-                <Button className={classes.special_button}>View Photos</Button>
             </div>
-            <div className={classes.divider}></div>
         </div>
     );
 }
