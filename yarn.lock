@@ -2770,6 +2770,11 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
+fontsource-roboto@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/fontsource-roboto/-/fontsource-roboto-2.1.4.tgz#1716342fea11380e5d4adf7e90cc0ccd7b6e6856"
+  integrity sha512-2NP2idRiX19pjwdNV0NvPaiDziIAFYg6IogPuQUJwVYq8BYqPDWRAGX7maQQFzvEvAUt1u9xaRGVwE7SIeCKDA==
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
