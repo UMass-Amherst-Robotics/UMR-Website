@@ -44,7 +44,7 @@ const Navbar = () => {
                     <Toolbar>
                             <img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' />
                             <Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
-                            <Button className={classes.menu_button} color="inherit" href='/aboutus'>ABOUT US</Button>
+                            <Button className={classes.menu_button} color="inherit" href='/about-us'>ABOUT US</Button>
                             <Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
                             <Button className={classes.menu_button} color="inherit" href='/sponsors'>SPONSORS</Button>
                             <Button className={classes.menu_button} colot="inhereit" href='/donate'>DONATE</Button>
