@@ -5,7 +5,7 @@ import QuickFacts from './QuickFacts.js'
 export default function Body() {
   return (
     <div>
-      <QuickFacts />
+      <QuickFacts/>
     </div>
   )
 }
