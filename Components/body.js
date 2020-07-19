@@ -1,9 +1,11 @@
 import React from 'react';
 
+import QuickFacts from './QuickFacts.js'
+
 export default function Body() {
   return (
     <div>
-      This is the Body
+      <QuickFacts />
     </div>
   )
 }
