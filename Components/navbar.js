@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         fontWeight: 'bold',
 		fontSize: 20,
-		height: 80,
+		height: 60,
 		width: 170
     }
   }));
@@ -42,7 +42,9 @@ const Navbar = () => {
             <div className={classes.root}>
                 <AppBar elevation={0} position="sticky" className={classes.menubar}>
                     <Toolbar>
-                            <img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' />
+							<a href='/'>
+                            	<img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' />
+							</a>
                             <Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
                             <Button className={classes.menu_button} color="inherit" href='/about-us'>ABOUT US</Button>
                             <Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
