@@ -7,8 +7,10 @@ import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/sty
 export default function Home() {
   return (
     <body style={{margin: "0"}}>
+      <div>
         <Navbar/>
-        <Body/>
+        <Body />
+      </div>
     </body>
   )
 }
