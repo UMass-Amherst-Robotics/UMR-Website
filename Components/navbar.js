@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#2C2C2C"
   },
   menubar: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#2C2C2C',
     boxShadow: 'none',
   },
   divider: {
@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
   	<div>
     	<div className={classes.root}>
-      	<AppBar elevation={0} position="sticky" className={classes.menubar}>
+      	<AppBar elevation={0} className={classes.menubar}>
         	<Toolbar>
 						<a href='/'><img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
 							<Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
