@@ -15,13 +15,13 @@ const tutorialSteps = [
   {
     label: 'The Fellas',
     imgPath:
-      '/TheFellas.jpg',
+      'TheFellas.jpg',
 	//href:
   },
   {
     label: 'Lunabotics',
     imgPath:
-      '/LunaboticsLogo.jpg',
+      'LunaboticsLogo.jpg',
 	  //href:
   },
 ];

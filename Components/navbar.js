@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     menu_button: {
         color: 'white',
         fontWeight: 'bold',
-		fontSize: 20,
+		fontSize: 15,
 		height: 60,
 		width: 170
     }

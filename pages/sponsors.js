@@ -8,7 +8,7 @@ export default function Sponsors() {
     <body style={{margin: "0"}}>
       <div>
         <Navbar/>
-			<h1> Sponsors </h1>
+				<h1> Sponsors </h1>
       </div>
     </body>
   )
