@@ -14,29 +14,27 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const tutorialSteps = [
   {
     label: 'The Fellas',
-    imgPath:
-      'TheFellas.jpg',
+    imgPath: 'TheFellas.jpg',
 	//href:
   },
   {
     label: 'Lunabotics',
-    imgPath:
-      'LunaboticsLogo.jpg',
+    imgPath: 'LunaboticsLogo.jpg',
 	  //href:
   },
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
-	maxHeight: 600,
+		maxHeight: 600,
     flexGrow: 1,
-	background: '#2C2C2C'
+		background: '#2C2C2C'
   },
   stepper: {
-	background: "#9A1E1E",
-	width: '60%',
-	alignItems:'center',
-	justifyContent:'center'
+		background: "#9A1E1E",
+		width: '60%',
+		alignItems:'center',
+		justifyContent:'center'
   },
   images: {
 	  display:'flex',
@@ -47,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     height: 500,
     display: 'block',
     overflow: 'hidden',
-	padding: '0 0 20px'
+		padding: '0 0 20px'
   },
 }));
 
@@ -76,9 +74,9 @@ function SwipeableTextMobileStepper() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-		interval={8000}
-		elevation={2}
-      >
+				interval={8000}
+				elevation={2}
+			>
         {tutorialSteps.map((step, index) => (
           <div key={step.label} className={classes.images}>
 	            {Math.abs(activeStep - index) <= 2 ? (
@@ -87,7 +85,6 @@ function SwipeableTextMobileStepper() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-
     </div>
   );
 }
