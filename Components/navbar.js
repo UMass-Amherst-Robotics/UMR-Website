@@ -3,14 +3,14 @@ import { makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import Grid from '@material-ui/core/Grid'
+import StyledButton from './styledbutton.js'
 import Toolbar from '@material-ui/core/Toolbar'
 
 const useStyles = makeStyles((theme) => ({
     root: {
       position: 'relative',
       height: "550px",
-      background: "#2C2C2C"
+      background: "#2C2C2C",
     },
     menubar: {
         backgroundColor: 'transparent',
@@ -55,7 +55,7 @@ const Navbar = () => {
                             <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
                     </Toolbar>
                 </AppBar>
-                <Button className={classes.special_button}>View Photos</Button>
+                <StyledButton title="Cool Title" className={classes.special_button}>View Photos</StyledButton>
             </div>
             <div className={classes.divider}></div>
         </div>
