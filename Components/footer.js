@@ -13,9 +13,16 @@ const useStyles = makeStyles({
     height: "100px",
     background: "#2C2C2C",
     padding: '25px 0px 0px 0px',
+<<<<<<< HEAD
   },
   Tag: {
     padding: '10px 0px 0px 0px'
+=======
+    //maxWidth: '100%'
+  },
+  Tag: {
+    padding: '15px 0px 0px 0px'
+>>>>>>> e6aacbb10e9115abc16eac13ac6051dee220ae9a
   },
 });
 
