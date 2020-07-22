@@ -35,7 +35,6 @@ export default function CopyrightTag(){
         justify= 'space-evenly'
         alignItems= 'center'
       >
-<<<<<<< HEAD
         <a href='https://www.instagram.com/umassrobotics/' target='_blank'>
           <InstagramIcon  className={classes.Icon}/>
         </a>
@@ -45,11 +44,6 @@ export default function CopyrightTag(){
         <a href='https://github.com/UMass-Amherst-Robotics' target='_blank'>
           <GitHubIcon  className={classes.Icon}/>
         </a>
-=======
-        <InstagramIcon  className={classes.Icon} href='https://www.instagram.com/umassrobotics/'/>
-        <YouTubeIcon className={classes.Icon} href='https://www.youtube.com/channel/UCpH514vygzjNv3PWWZNuKuA' />
-        <GitHubIcon  className={classes.Icon} href='https://github.com/UMass-Amherst-Robotics'/>
->>>>>>> e6aacbb10e9115abc16eac13ac6051dee220ae9a
       </Grid>
     </div>
   )
