@@ -27,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
   menu_button: {
     color: 'white',
     fontWeight: 'bold',
-		fontSize: 15,
-		height: 60,
-		width: 170
-	}
+    fontSize: 15,
+    height: 60,
+    width: 170
+  }
 }));
 
 const Navbar = () => {
@@ -41,16 +41,16 @@ const Navbar = () => {
     	<div className={classes.root}>
       	<AppBar elevation={0} className={classes.menubar}>
         	<Toolbar>
-						<a href='/'><img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
-							<Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
-							<Button className={classes.menu_button} color="inherit" href='/about-us'>ABOUT US</Button>
-							<Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
-							<Link href='/sponsors'><Button className={classes.menu_button} color="inherit">SPONSORS</Button></Link>
-							<Button className={classes.menu_button} colot="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1'>DONATE</Button>
-          </Toolbar>
-				</AppBar>
-			</div>
+					<a href='/'><img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
+						<Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
+						<Button className={classes.menu_button} color="inherit" href='/about-us'>ABOUT US</Button>
+						<Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
+						<Link href='/sponsors'><Button className={classes.menu_button} color="inherit">SPONSORS</Button></Link>
+						<Button className={classes.menu_button} colot="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1'>DONATE</Button>
+			</Toolbar>
+		</AppBar>
 		</div>
+	</div>
   );
 }
 
