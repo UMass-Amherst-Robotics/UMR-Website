@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Initial setup
+Download [Node.js](https://nodejs.org/en/)
+and [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable).
+If you are having trouble downloading yarn, use `npm install --global yarn` after installing Node.js
+
+In the directory, download necessary dependencies with `yarn install`
+
 ## Getting Started
 
 First, run the development server:

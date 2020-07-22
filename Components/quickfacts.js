@@ -5,21 +5,21 @@ import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
     root: {
+      position: 'relative',
       height: "700px",
       background: "#9A1E1E",
     },
     title: {
       fontWeight: 'bold',
-      padding: '30px',
+      padding: '40px',
       color: '#FFFFFF'
     },
     container: {
-      position: 'relative',
+      position: 'absolute',
     },
     flyoutCard: {
       position: 'absolute',
       left: '-2px',
-      top: '10%',
       width: '45%',
       height: '35%'
     }
@@ -33,9 +33,7 @@ const QuickFacts = () => {
       <Typography className={classes.title} variant = "h3" gutterBottom>
         Quick Facts
       </Typography>
-      <div className={classes.container}>
-        <Card className={classes.flyoutCard}> Text </Card>
-      </div>
+      <Card className={classes.flyoutCard}> Text </Card>
     </div>
   )
 }

@@ -6,7 +6,7 @@ import Introduction from './introduction.js'
 export default function Body() {
   return (
     <div>
-      <Introduction />
+    	<Introduction />
       <QuickFacts/>
     </div>
   )
