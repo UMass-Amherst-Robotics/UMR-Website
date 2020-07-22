@@ -74,14 +74,14 @@ function SwipeableTextMobileStepper() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-				interval={8000}
-				elevation={2}>
-					{tutorialSteps.map((step, index) => (
-						<div key={step.label} className={classes.images}>
-							{Math.abs(activeStep - index) <= 2 ? (
-								<img className={classes.img} src={step.imgPath} alt={step.label} />
-								):null}
-						</div>
+        interval={8000}
+        elevation={2}>
+          {tutorialSteps.map((step, index) => (
+            <div key={step.label} className={classes.images}>
+              {Math.abs(activeStep - index) <= 2 ? (
+                <img className={classes.img} src={step.imgPath} alt={step.label} />
+                ):null}
+            </div>
         ))}
       </AutoPlaySwipeableViews>
     </div>
