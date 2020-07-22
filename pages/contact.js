@@ -8,7 +8,7 @@ export default function Contact() {
     <body style={{margin: "0"}}>
       <div>
         <Navbar/>
-			<h1> Contact </h1>
+          <h1> Contact </h1>
       </div>
     </body>
   )

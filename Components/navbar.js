@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Toolbar from '@material-ui/core/Toolbar'
 import Link from 'next/link'
+import AboutUsMenuButton from './aboutus-menubutton.js'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
@@ -44,20 +46,8 @@ const Navbar = () => {
             <a href='/'><img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
             <Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
 
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-              ABOUT US
-            </Button>
-            <Menu
-              id="simple-menu"
-              anchorEl={anchorEl}
-              keepMounted
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <Link href='/nasa-lunabotics-2020-2021'><MenuItem onClick={handleClose}>Nasa Lunarobotics 2020-2021</MenuItem></Link>
-              <Link href='/meet-the-team'><MenuItem onClick={handleClose}>Meet the Team</MenuItem></Link>
-            </Menu>
-            <Button className={classes.menu_button} color="inherit" href='/about-us'>ABOUT US</Button>
+            <AboutUsMenuButton />
+
             <Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
             <Link href='/sponsors'>
               <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
