@@ -12,7 +12,7 @@ export default function Home() {
     <body style={{margin: "0"}}>
       <div>
         <Navbar/>
-					<Banner />
+				<Banner />
         <Body />
       </div>
     </body>

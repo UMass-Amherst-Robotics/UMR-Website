@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
@@ -17,12 +19,20 @@ const useStyles = makeStyles((theme) => ({
     container: {
       position: 'absolute',
     },
-    flyoutCard: {
+    leftFlyoutCard: {
       position: 'absolute',
-      left: '-2px',
+      left: '50px',
       width: '45%',
-      height: '35%'
-    }
+      height: '35%',
+      borderRadius: 30,
+    },
+    rightFlyoutCard: {
+      position: 'absolute',
+      right: '50px',
+      width: '45%',
+      height: '35%',
+      borderRadius: 30,
+    },
   }));
 
 const QuickFacts = () => {
@@ -33,7 +43,24 @@ const QuickFacts = () => {
       <Typography className={classes.title} variant = "h3" gutterBottom>
         Quick Facts
       </Typography>
-      <Card className={classes.flyoutCard}> Text </Card>
+      <Grid nowrap spacing={3}>
+        <Grid container spacing={3}>
+          <Grid>
+            <Paper elevation={0} className={classes.leftFlyoutCard}></Paper>
+          </Grid>
+          <Grid>
+            <Paper elevation={0} className={classes.rightFlyoutCard}></Paper>
+          </Grid>
+        </Grid>
+        <Grid column spacing={3}>
+          <Grid>
+            <Paper elevation={0} className={classes.leftFlyoutCard}></Paper>
+          </Grid>
+          <Grid>
+            <Paper elevation={0} className={classes.rightFlyoutCard}></Paper>
+          </Grid>
+        </Grid>
+      </Grid>
     </div>
   )
 }
