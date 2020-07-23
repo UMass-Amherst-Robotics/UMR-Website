@@ -1,28 +1,21 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography'
+import Fade from 'react-reveal/Fade';
+import Typography from '@material-ui/core/Typography';
+
+// Local imports
+import QuickFactTile from './quickfact-tile.js';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      height: "1000px",
       background: "#9A1E1E",
     },
     title: {
       fontWeight: 'bold',
       padding: '40px',
       color: '#FFFFFF'
-    },
-    flyoutCard: {
-      padding: theme.spacing(20),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-      whiteSpace: 'nowrap',
-      marginBottom: theme.spacing(10),
-      borderRadius: theme.spacing(10),
     },
     container: {
       display: 'grid',
@@ -47,16 +40,40 @@ const QuickFacts = () => {
           spacing={3}
       >
         <Grid item xs={5}>
-          <Paper elevation={0} className={classes.flyoutCard}></Paper>
+          <Fade left>
+            <QuickFactTile 
+              title="13"
+              text="Team Members"
+              img="/people-red.png"
+            />
+          </Fade>
         </Grid>
         <Grid item xs={5}>
-          <Paper elevation={0} className={classes.flyoutCard}></Paper>
+          <Fade right>
+            <QuickFactTile 
+              title="1000"
+              text="Dollars Raised"
+              img="/trophy-red.png"
+            />
+          </Fade>
         </Grid>
         <Grid item xs={5}>
-          <Paper elevation={0} className={classes.flyoutCard}></Paper>
+          <Fade left>
+            <QuickFactTile 
+              title="2"
+              text="Prototype Robots"
+              img="/robot-red.png"
+            />
+          </Fade>
         </Grid>
         <Grid item xs={5}>
-          <Paper elevation={0} className={classes.flyoutCard}></Paper>
+          <Fade right>
+            <QuickFactTile 
+              title="8"
+              text="Months Old"
+              img="/calendar-red.png"
+            />
+          </Fade>
         </Grid>
       </Grid>
     </div>
