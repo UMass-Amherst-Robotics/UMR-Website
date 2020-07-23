@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import { motion } from "framer-motion";
+
 
 const useStyles = makeStyles((theme) => ({
     flyoutTile: {
@@ -33,27 +35,29 @@ const QuickFactTile = (props) => {
     const classes = useStyles();
 
     return (
-        <Paper elevation={0} className={classes.flyoutTile}>
-            <Grid
-                container
-                direction="row"
-                justify="space-around"
-                alignItems="center"
-                spacing={5}
-            >
-                <Grid item>
-                    <Typography variant = 'h1' className={classes.title}>
-                     {props.title}
-                    </Typography>
-                    <Typography variant = 'h4' className={classes.text}>
-                     {props.text}
-                    </Typography>
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1.0 }}>
+            <Paper elevation={0} className={classes.flyoutTile}>
+                <Grid
+                    container
+                    direction="row"
+                    justify="space-around"
+                    alignItems="center"
+                    spacing={5}
+                >
+                    <Grid item>
+                        <Typography variant = 'h1' className={classes.title}>
+                        {props.title}
+                        </Typography>
+                        <Typography variant = 'h4' className={classes.text}>
+                        {props.text}
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <img src={props.img} alt="" className={classes.logo} href='/' />
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <img src={props.img} alt="" className={classes.logo} href='/' />
-                </Grid>
-            </Grid>
-        </Paper>
+            </Paper>
+        </motion.div>
     );
 }
 
