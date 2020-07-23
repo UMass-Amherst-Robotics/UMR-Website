@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import React from 'react';
+
+
 import Navbar from './../Components/navbar.js'
 import Body from './../Components/body.js'
 import Banner from '../Components/banner.js'
