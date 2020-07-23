@@ -7,6 +7,7 @@ import StyledButton from './styledbutton.js'
 import Toolbar from '@material-ui/core/Toolbar'
 import Link from 'next/link'
 import AboutUsMenuButton from './aboutus-menubutton.js'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     fontSize: 15,
     height: 60,
-    width: 150
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
   }
 }));
 
@@ -43,14 +45,21 @@ const Navbar = () => {
       <div className={classes.root}>
         <AppBar elevation={0} className={classes.menubar}>
           <Toolbar>
-            <a href='/'><img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
-            <Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
-            <AboutUsMenuButton />
-            <Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
-            <Link href='/sponsors'>
-              <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
-            </Link>
-            <Button className={classes.menu_button} colot="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1' target='_blank'>DONATE</Button>
+            <Grid
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
+            >
+              <a href='/'><img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
+              <Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
+              <AboutUsMenuButton />
+              <Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
+              <Link href='/sponsors'>
+                <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
+              </Link>
+              <Button className={classes.menu_button} colot="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1' target='_blank'>DONATE</Button>
+            </Grid>
       </Toolbar>
     </AppBar>
     </div>
