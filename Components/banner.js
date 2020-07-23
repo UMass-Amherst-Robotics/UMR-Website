@@ -86,10 +86,9 @@ function SwipeableTextMobileStepper() {
                 <img className={classes.img} src={step.imgPath} alt={step.label} />
                 ):null}
             </div>
-        ))}
+          ))}
       </AutoPlaySwipeableViews>
-      <div className={classes.divider}>
-      </div>
+      <div className={classes.divider} />
     </div>
   );
 }
