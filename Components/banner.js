@@ -47,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     padding: '0 0 20px'
   },
+  divider: {
+    height: 8,
+    background: "#9A1E1E",
+  },
 }));
 
 function SwipeableTextMobileStepper() {
@@ -82,8 +86,9 @@ function SwipeableTextMobileStepper() {
                 <img className={classes.img} src={step.imgPath} alt={step.label} />
                 ):null}
             </div>
-        ))}
+          ))}
       </AutoPlaySwipeableViews>
+      <div className={classes.divider} />
     </div>
   );
 }

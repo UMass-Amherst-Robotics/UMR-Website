@@ -3,7 +3,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import Grid from '@material-ui/core/Grid'
+import StyledButton from './styledbutton.js'
 import Toolbar from '@material-ui/core/Toolbar'
 import Link from 'next/link'
 import AboutUsMenuButton from './aboutus-menubutton.js'
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     fontSize: 15,
     height: 60,
-    width: 170
+    width: 150
   }
 }));
 
