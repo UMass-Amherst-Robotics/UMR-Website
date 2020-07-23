@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
     logo: {
         maxWidth: 175,
-    }, 
+    },
   }));
 
 const QuickFactTile = (props) => {

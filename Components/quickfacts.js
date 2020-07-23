@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
       gridTemplateColumns: 'repeat(12, 1fr)',
       gridGap: theme.spacing(3),
     },
+    link:{
+      color:'white',
+      textdecoration: 'none'
+    }
   }));
 
 const QuickFacts = () => {
@@ -41,25 +45,30 @@ const QuickFacts = () => {
       >
         <Grid item xs={5}>
           <Fade left>
-            <QuickFactTile 
+            <a className={classes.link} href='/meet-the-team'>
+            <QuickFactTile
               title="13"
               text="Team Members"
               img="/people-red.png"
             />
+            </a>
           </Fade>
         </Grid>
         <Grid item xs={5}>
           <Fade right>
-            <QuickFactTile 
+          <a className={classes.link} href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1'>
+            <QuickFactTile
               title="1000"
               text="Dollars Raised"
               img="/trophy-red.png"
             />
+            </a>
           </Fade>
         </Grid>
+
         <Grid item xs={5}>
           <Fade left>
-            <QuickFactTile 
+            <QuickFactTile
               title="2"
               text="Prototype Robots"
               img="/robot-red.png"
@@ -68,7 +77,7 @@ const QuickFacts = () => {
         </Grid>
         <Grid item xs={5}>
           <Fade right>
-            <QuickFactTile 
+            <QuickFactTile
               title="8"
               text="Months Old"
               img="/calendar-red.png"

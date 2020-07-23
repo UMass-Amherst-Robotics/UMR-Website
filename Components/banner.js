@@ -13,8 +13,8 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 // to update banner on home page, change tutorialSteps properties
 const tutorialSteps = [
   {
-    //label: 'Applications',
-    //imgPath: 'applications.png'
+    label: 'Applications',
+    imgPath: 'applications.png'
     //href: /apply
   },
   {
