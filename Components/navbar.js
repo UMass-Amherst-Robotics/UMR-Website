@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button'
 import StyledButton from './styledbutton.js'
 import Toolbar from '@material-ui/core/Toolbar'
 import Link from 'next/link'
+import AboutUsMenuButton from './aboutus-menubutton.js'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
@@ -41,11 +43,15 @@ const Navbar = () => {
       <div className={classes.root}>
         <AppBar elevation={0} className={classes.menubar}>
           <Toolbar>
-          <a href='/'><img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
+            <a href='/'><img src="/umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
             <Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
-            <Button className={classes.menu_button} color="inherit" href='/about-us'>ABOUT US</Button>
+
+            <AboutUsMenuButton />
+
             <Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
-            <Link href='/sponsors'><Button className={classes.menu_button} color="inherit">SPONSORS</Button></Link>
+            <Link href='/sponsors'>
+              <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
+            </Link>
             <Button className={classes.menu_button} colot="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1'>DONATE</Button>
       </Toolbar>
     </AppBar>

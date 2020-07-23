@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      position: 'relative',
-      height: "700px",
+      flexGrow: 1,
+      height: "1000px",
       background: "#9A1E1E",
     },
     title: {
@@ -16,22 +16,18 @@ const useStyles = makeStyles((theme) => ({
       padding: '40px',
       color: '#FFFFFF'
     },
+    flyoutCard: {
+      padding: theme.spacing(20),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+      whiteSpace: 'nowrap',
+      marginBottom: theme.spacing(10),
+      borderRadius: theme.spacing(10),
+    },
     container: {
-      position: 'absolute',
-    },
-    leftFlyoutCard: {
-      position: 'absolute',
-      left: '50px',
-      width: '45%',
-      height: '35%',
-      borderRadius: 30,
-    },
-    rightFlyoutCard: {
-      position: 'absolute',
-      right: '50px',
-      width: '45%',
-      height: '35%',
-      borderRadius: 30,
+      display: 'grid',
+      gridTemplateColumns: 'repeat(12, 1fr)',
+      gridGap: theme.spacing(3),
     },
   }));
 
@@ -43,22 +39,24 @@ const QuickFacts = () => {
       <Typography className={classes.title} variant = "h3" gutterBottom>
         Quick Facts
       </Typography>
-      <Grid nowrap spacing={3}>
-        <Grid container spacing={3}>
-          <Grid>
-            <Paper elevation={0} className={classes.leftFlyoutCard}></Paper>
-          </Grid>
-          <Grid>
-            <Paper elevation={0} className={classes.rightFlyoutCard}></Paper>
-          </Grid>
+      <Grid
+          container
+          direction="row"
+          justify="space-around"
+          alignItems="center"
+          spacing={3}
+      >
+        <Grid item xs={5}>
+          <Paper elevation={0} className={classes.flyoutCard}></Paper>
         </Grid>
-        <Grid column spacing={3}>
-          <Grid>
-            <Paper elevation={0} className={classes.leftFlyoutCard}></Paper>
-          </Grid>
-          <Grid>
-            <Paper elevation={0} className={classes.rightFlyoutCard}></Paper>
-          </Grid>
+        <Grid item xs={5}>
+          <Paper elevation={0} className={classes.flyoutCard}></Paper>
+        </Grid>
+        <Grid item xs={5}>
+          <Paper elevation={0} className={classes.flyoutCard}></Paper>
+        </Grid>
+        <Grid item xs={5}>
+          <Paper elevation={0} className={classes.flyoutCard}></Paper>
         </Grid>
       </Grid>
     </div>
