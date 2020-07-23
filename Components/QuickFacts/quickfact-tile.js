@@ -50,7 +50,7 @@ const QuickFactTile = (props) => {
                     </Typography>
                 </Grid>
                 <Grid item>
-                    <img src={props.img} alt="logo" className={classes.logo} href='/' />
+                    <img src={props.img} alt="" className={classes.logo} href='/' />
                 </Grid>
             </Grid>
         </Paper>
