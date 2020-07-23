@@ -13,13 +13,18 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 // to update banner on home page, change tutorialSteps properties
 const tutorialSteps = [
   {
+    //label: 'Applications',
+    //imgPath: 'applications.png'
+    //href: /apply
+  },
+  {
     label: 'The Fellas',
     imgPath: 'TheFellas.jpg',
     //href:
   },
   {
     label: 'Lunabotics',
-    imgPath: 'LunaboticsLogo.jpg',
+    imgPath: 'LunaboticsLogo.png',
     //href:
   },
 ];
@@ -28,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxHeight: 600,
     flexGrow: 1,
-    background: '#2C2C2C'
+    background: //"#9A1E1E"
+    '#2C2C2C'
   },
   stepper: {
     background: "#9A1E1E",
@@ -49,7 +55,8 @@ const useStyles = makeStyles((theme) => ({
   },
   divider: {
     height: 8,
-    background: "#9A1E1E",
+    background: //'#2C2C2C'
+    "#9A1E1E",
   },
 }));
 
