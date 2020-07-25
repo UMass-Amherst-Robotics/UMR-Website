@@ -42,7 +42,6 @@ const QuickFacts = () => {
           direction="row"
           justify="space-around"
           alignItems="center"
-          spacing={3}
       >
         <Grid item xs={5}>
             <a className={classes.link} href='/meet-the-team'>
