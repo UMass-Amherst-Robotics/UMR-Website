@@ -9,8 +9,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: 40,
-    flexGrow: 1,
+    padding: 50,
+    width: '50%',
+    margin: 'auto',
   },
   title:{
     fontWeight: 'bold',
@@ -19,9 +20,10 @@ const useStyles = makeStyles((theme) => ({
     color: '#9A1E1E',
   },
   textField: {
-    width: '25ch',
+    margin: 0,
   },
   margin: {
+    padding: 10,
     margin: theme.spacing(1),
   }
 }));
@@ -33,25 +35,13 @@ export default function Contact() {
     <body style={{margin: "0"}}>
       <div>
         <Navbar/>
-        <Grid
-          container
-          direction="column"
-          justify="center"
-          alignItems="center"
-        >
           <div className={classes.root}>
-            <Grid item xs>
-              <Typography className={classes.title} variant = "h1" gutterBottom>Contact</Typography>
-            </Grid>
-            <Grid item xs>
-              <form className={classes.root} noValidate autoComplete="off">
-                <FormControl fullWidth className={classes.margin}>
-                  <TextField className={classes.textField} id="standard-basic" label="Standard" />
-                </FormControl>
-              </form>
-            </Grid>
-          </div>
-        </Grid>
+            <Typography className={classes.title} variant = "h1" gutterBottom>Contact</Typography>
+            <form className={classes.margin} noValidate autoComplete="off">
+              <TextField className={classes.textField} id="standard-basic" label="Test" />
+              <TextField fullWidth className={classes.textField} id="standard-full-width" label="Test" />
+            </form>
+        </div>
       </div>
     </body>
   )
