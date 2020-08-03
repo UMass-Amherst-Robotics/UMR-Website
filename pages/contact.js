@@ -9,9 +9,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: 50,
-    width: '50%',
-    margin: 'auto',
+    paddingTop: 50,
+    width: '40%',
+    marginLeft: '30%',
+    marginRight: '30%',
+  },
+  form: {
+    
   },
   title:{
     fontWeight: 'bold',
@@ -23,8 +27,10 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
   },
   margin: {
-    padding: 10,
-    margin: theme.spacing(1),
+    '& .MuiTextField-root': {
+      margin: '1%',
+      width: '48%',
+    },
   }
 }));
 
@@ -38,8 +44,10 @@ export default function Contact() {
           <div className={classes.root}>
             <Typography className={classes.title} variant = "h1" gutterBottom>Contact</Typography>
             <form className={classes.margin} noValidate autoComplete="off">
-              <TextField className={classes.textField} id="standard-basic" label="Test" />
-              <TextField fullWidth className={classes.textField} id="standard-full-width" label="Test" />
+              <div>
+                <TextField className={classes.textField} id="standard-full-width" label="First Name" />
+                <TextField fullWidth className={classes.textField} id="standard-full-width" label="Last Name" />
+              </div>
             </form>
         </div>
       </div>
