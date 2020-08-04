@@ -5,11 +5,6 @@ import { makeStyles} from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     styled_button: {
         borderRadius: "1em",
-        backgroundColor: '#FFFFFF',
-        bottom: '20px',
-        right: '20px',
-        position: 'absolute',
-        color: '#9A1E1E',
         fontWeight: 'bold',
         height: '50px',
         width: '150px'
