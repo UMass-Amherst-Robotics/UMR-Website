@@ -22,13 +22,13 @@ const useStyles = makeStyles((theme) => ({
   button:{
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
-    padding: 15,  
+    padding: 15,
     backgroundColor: '#312927',
     color: '#FFFFFF',
   },
   img: {
     maxWidth: 700,
-  }, 
+  },
 }));
 
 
@@ -62,7 +62,7 @@ export default function Introduction() {
           workplace environment. UMass Robotics is an amazing place for students of
           all experience levels, and we hope to see you on the team!
         </Typography>
-        <Button className={classes.button} variant='contained'>
+        <Button className={classes.button} variant='contained' href='/meet-the-team' >
         Learn More About Us
         </Button>
       </Grid>

@@ -55,6 +55,7 @@ const Navbar = () => {
               <Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
               <AboutUsMenuButton />
               <Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
+              <Button className={classes.menu_button} color="inherit" href='/apply'>APPLY</Button>
               <Link href='/sponsors'>
                 <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
               </Link>
