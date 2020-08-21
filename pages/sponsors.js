@@ -14,14 +14,24 @@ import SilverDonators from '../Components/sponsors/silverdonators.js'
 const useStyles = makeStyles({
   root: {
     maxWidth: 1280,
-    width: "90%"
+    width: "100%"
   },
   introduction: {
     fontWeight: 'bold',
     fontSize: '2rem',
     paddingTop: '30px',
-    paddingLeft: '30px'
+    paddingLeft: '30px',
+    paddingBottom: '10px'
   },
+  divider: {
+    width: '92%'
+  },
+  sponsors:{
+    width: '80%'
+  },
+  donators: {
+    maxWidth: 1000
+  }
 });
 
 export default function Sponsors() {
@@ -36,12 +46,19 @@ export default function Sponsors() {
               Thank you to our supporters and sponsors!
             </Typography>
           </Grid>
-
-          <Grid item xs={12}><hr/></Grid>
+        </Grid>
+      </Box>
+      <hr className={classes.divider}/>
+      <Box mx='auto' className={classes.sponsors}>
+        <Grid container spacing={1}>
           <Grid item xs={12} align='center'>
             <CorporateSponsors/>
           </Grid>
-          <Grid item xs={12}><hr/></Grid>
+        </Grid>
+      </Box>
+      <hr className={classes.divider}/>
+      <Box mx='auto' className={classes.donators}>
+        <Grid container spacing={1}>
           <Grid item xs={6} align='center'>
             <GoldDonators/>
           </Grid>
@@ -49,6 +66,7 @@ export default function Sponsors() {
             <SilverDonators/>
           </Grid>
         </Grid>
+
       </Box>
       <Footer/>
     </body>

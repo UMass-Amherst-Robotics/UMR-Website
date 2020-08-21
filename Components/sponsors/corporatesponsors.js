@@ -21,7 +21,7 @@ let companies = [
 export default function CorporateSponsors() {
   return (
     <div className='corp-sponsor-container'>
-        <Grid container >
+        <Grid container>
           {companies.map((company) => (
             <Grid item xs={6} align='center'>
               <img src={company.image} alt='Logo'/>
