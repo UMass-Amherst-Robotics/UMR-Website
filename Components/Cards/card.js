@@ -32,9 +32,9 @@ const theme = createMuiTheme({
     values: {
       xs: 0,
       sm: 575,
-      md: 910,
-      lg: 910,
-      xl: 1200
+      md: 600,
+      lg: 825,
+      xl: 905
     }
   }
 });
@@ -45,8 +45,25 @@ const useStyles = makeStyles({
   },
   imageHeight: {
     height: 300,
+    [theme.breakpoints.down('xs')]: {
+      height: 400,
+    },
   },
   bodyHeight: {
+    [theme.breakpoints.up('sm')]: {
+      height: 240,
+    },
+    [theme.breakpoints.up('md')]: {
+      height: 210,
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: 260,
+    },
+    [theme.breakpoints.up('xl')]: {
+      height: 210,
+    },
+    
+    /*
     [theme.breakpoints.down('md')]: {
       height: 260,
     },
@@ -56,6 +73,7 @@ const useStyles = makeStyles({
     [theme.breakpoints.down('xs')]: {
       height: 150,
     }
+    */
   },
 });
 

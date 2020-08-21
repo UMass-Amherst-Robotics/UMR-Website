@@ -51,7 +51,9 @@ let execs = [
   {name: "Sean Flanagan", image: "/Profiles/SeanFlanPicture.png", execRole: "Vice-President", major: "Mechanical Engineering", work: "Mechanical design, analysis", hobbies: "Spikeball, volleyball, table tennis", diningHall: "Hamp"},
   {name: "Dom Locurto", image: "/Profiles/DomPicture.png", execRole: "Treasurer", major: "Mechanical Engineering", work: "Mechanical design, analysis", hobbies: "Ultimate frisbee, cooking, gaming", diningHall: "Hamp"},
   {name: "Alex Klinkhamer", image: "/Profiles/AlexPicture.png", execRole: "Secretary", major: "Mechanical Engineering", work: "Mechanical design, analysis", hobbies: "3D printing, designing, CAD, running", diningHall: "Worcester"},
-  {name: "Jagath Jai Kumar", image: "/Profiles/JagathPicture.png", execRole: "Cyber Forensics Research Fellow", major: "Computer Science Graduate", work: "Advising and mentorship", hobbies: "Rock climbing, 3D printing", diningHall: "Berk"}
+  {name: "Jagath Jai Kumar", image: "/Profiles/JagathPicture.png", execRole: "Cyber Forensics Research Fellow", major: "C.S. Graduate", work: "General advising and mentorship", hobbies: "Rock climbing, 3D printing", diningHall: "Berk"},
+  {name: "Adam Rivelli", image: "/Profiles/AdamPicture.png", execRole: "C.S. Master's Student", major: "C.S. and Mechanical Engineering Graduate", work: "Mechanical engineering mentorship", hobbies: "Rock climbing, running, hiking", diningHall: "Berk"}
+
 
 ]
 
@@ -77,7 +79,7 @@ export default function Team() {
           <Box mx="auto" className={classes.root} mt={4}>
             <Box mb={4}>
               <Typography variant="h2">
-                Executive Board
+               <b> Executive Board</b>
               </Typography>
             </Box>
           <Grid container spacing={spacing}>
@@ -93,7 +95,7 @@ export default function Team() {
           </Box>
           <Box mb={4}>
             <Typography variant="h2">
-              Team
+              <b>Team</b>
             </Typography>
           </Box>
           <Grid container spacing={spacing}>
