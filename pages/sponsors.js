@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     width: '80%'
   },
   donators: {
-    maxWidth: 1000
+    maxWidth: 850
   }
 });
 
@@ -49,6 +49,7 @@ export default function Sponsors() {
         </Grid>
       </Box>
       <hr className={classes.divider}/>
+      {/*
       <Box mx='auto' className={classes.sponsors}>
         <Grid container spacing={1}>
           <Grid item xs={12} align='center'>
@@ -57,16 +58,21 @@ export default function Sponsors() {
         </Grid>
       </Box>
       <hr className={classes.divider}/>
+      */}
       <Box mx='auto' className={classes.donators}>
         <Grid container spacing={1}>
-          <Grid item xs={6} align='center'>
+          <Grid item xs={12} align='center'>
             <GoldDonators/>
           </Grid>
-          <Grid item xs={6} align='center'>
+        </Grid>
+      </Box>
+      <hr className={classes.divider}/>
+      <Box mx='auto' className={classes.donators}>
+        <Grid container spacing={1}>
+          <Grid item xs={12} align='center'>
             <SilverDonators/>
           </Grid>
         </Grid>
-
       </Box>
       <Footer/>
     </body>
