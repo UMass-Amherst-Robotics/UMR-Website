@@ -2,10 +2,10 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
-import Popper from '@material-ui/core/popper';
+import Popper from '@material-ui/core/Popper';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import Link from 'next/Link'
+import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
 menubar: {
