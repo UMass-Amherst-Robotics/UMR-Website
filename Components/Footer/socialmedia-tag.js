@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   Text: {
     position: 'relative',
     backgroundColor: 'transparent',
-    color:'#737373',
+    color:'white',
     fontFamily: 'Arial',
     fontWeight: 'Bold',
     fontSize: 15,
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   Icon: {
     padding: '10px',
     fontSize: 40,
-    color:'#737373',
+    color:'white',
   }
 });
 
@@ -37,7 +37,7 @@ export default function CopyrightTag(){
         alignItems= 'center'
       >
         <a href='https://www.instagram.com/umassrobotics/' target='_blank'>
-          <InstagramIcon  className={classes.Icon}/>
+          <InstagramIcon className={classes.Icon}/>
         </a>
         <a href='https://www.youtube.com/channel/UCpH514vygzjNv3PWWZNuKuA' target='_blank'>
           <YouTubeIcon className={classes.Icon}/>

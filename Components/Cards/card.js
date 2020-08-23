@@ -12,6 +12,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
+import Link from 'next/link'
 
 const theme = createMuiTheme({
   palette: {
@@ -45,6 +46,9 @@ const useStyles = makeStyles({
   },
   imageHeight: {
     height: 300,
+    [theme.breakpoints.down('md')]: {
+      height: 350,
+    },
     [theme.breakpoints.down('xs')]: {
       height: 400,
     },
@@ -54,13 +58,13 @@ const useStyles = makeStyles({
       height: 240,
     },
     [theme.breakpoints.up('md')]: {
-      height: 210,
+      height: 200,
     },
     [theme.breakpoints.up('lg')]: {
       height: 260,
     },
     [theme.breakpoints.up('xl')]: {
-      height: 210,
+      height: 200,
     },
     
     /*
@@ -117,10 +121,10 @@ export default function MediaCard(props) {
       </CardActionArea>
       <CardActions>
         <Box mx="auto">
-          <IconButton color="primary">
-            <LinkedInIcon style={styles.icon}/>
+          <IconButton color="primary" href={props.linkedIn} target="_blank">
+            <LinkedInIcon style={styles.icon}></LinkedInIcon>
           </IconButton>
-          <IconButton>
+          <IconButton href={props.gitHub} target="_blank">
             <GitHubIcon color="secondary" style={styles.icon}/>
           </IconButton>
         </Box>

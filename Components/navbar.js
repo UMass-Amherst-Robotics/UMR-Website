@@ -13,6 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { createMuiTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import TemporaryDrawer from './../Components/sidenav.js'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,8 +71,8 @@ const Navbar = () => {
             alignItems="center"
             >
               <Hidden lgUp>
-              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <MenuIcon />
+              <IconButton edge="start" color="white" aria-label="menu">
+                <Box position="absolute" left={2}><TemporaryDrawer position="relative" right={2}></TemporaryDrawer></Box>
               </IconButton>
               </Hidden>
               <Hidden lgUp>
@@ -87,7 +88,7 @@ const Navbar = () => {
               <Link href='/sponsors'>
                 <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
               </Link>
-              <Button className={classes.menu_button} colot="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1' target='_blank'>DONATE</Button>
+              <Button className={classes.menu_button} color="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1' target='_blank'>DONATE</Button>
               </Hidden>
             </Grid>
       </Toolbar>
