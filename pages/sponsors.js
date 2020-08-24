@@ -63,7 +63,7 @@ export default function Sponsors() {
           </Grid>
         </Box>
         <hr className={classes.divider}/>
-
+        {/*
         <Box mx='auto' className={classes.sponsors}>
           <Grid container spacing={1}>
             <Grid item xs={12} align='center'>
@@ -72,7 +72,7 @@ export default function Sponsors() {
           </Grid>
         </Box>
         <hr className={classes.divider}/>
-
+        */}
         <Box mx='auto' className={classes.donators}>
           <Grid container spacing={1}>
             <Grid item xs={12} align='center'>
