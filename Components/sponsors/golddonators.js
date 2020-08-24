@@ -9,7 +9,6 @@ export default function GoldSponsors() {
   const sm = 6;
   return (
     <div className='gold-container'>
-    <Box mx='auto'>
       <Grid container>
         <Grid item xs={xs} sm={sm}>
           <img src='./Gold.png' alt='gold sponsor'/>
@@ -23,7 +22,6 @@ export default function GoldSponsors() {
             }
         </Grid>
       </Grid>
-      </Box>
     </div>
   )
 }
