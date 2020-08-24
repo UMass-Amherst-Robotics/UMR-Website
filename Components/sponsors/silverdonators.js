@@ -11,9 +11,7 @@ export default function SilverDonators() {
     <div className='silver-container'>
       <Grid container direction='row'>
         <Grid item xs={xs} sm={sm}>
-          <Box m='auto'>
           <img src='./Silver.png' alt='silver sponsor'/>
-          </Box>
         </Grid>
         <Grid item xs={xs} sm={sm}>
           <Typography variant='h5'>SILVER DONATORS</Typography>
