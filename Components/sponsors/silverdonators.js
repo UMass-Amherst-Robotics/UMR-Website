@@ -16,14 +16,12 @@ export default function SilverDonators() {
           </Box>
         </Grid>
         <Grid item xs={xs} sm={sm}>
-          <ul>
           <Typography variant='h5'>SILVER DONATORS</Typography>
             {
               silvers.map((sponsor, index)=>{
                 return <p>{sponsor}</p>
               })
             }
-          </ul>
         </Grid>
       </Grid>
     </div>

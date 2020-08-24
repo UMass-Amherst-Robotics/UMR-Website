@@ -15,14 +15,12 @@ export default function GoldSponsors() {
           <img src='./Gold.png' alt='gold sponsor'/>
         </Grid>
         <Grid item xs={xs} sm={sm}>
-          <ul>
           <Typography variant='h5'>GOLD DONATORS</Typography>
             {
               golds.map((sponsor, index)=>{
                 return <p>{sponsor}</p>
               })
             }
-          </ul>
         </Grid>
       </Grid>
       </Box>
