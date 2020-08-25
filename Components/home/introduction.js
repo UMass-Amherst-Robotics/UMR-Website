@@ -9,19 +9,20 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
-    padding: '40px'
+    paddingLeft: '40px',
+    paddingRight: '40px',
   },
   title:{
-    fontSize: 40,
+    fontSize: 50,
     fontWeight: 'bold',
-    paddingBottom: '30px'
+    paddingBottom: '10px'
 
   },
   text:{
     maxWidth: 800,
   },
   button:{
-    marginTop: theme.spacing(7.5),
+    marginTop: theme.spacing(3.75),
     borderRadius: 10,
     padding: 15,  
     backgroundColor: '#312927',
@@ -29,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     width: "100%",
-    maxWidth: 700
+    maxWidth: 700,
+    marginTop: -35
   }, 
 }));
 
