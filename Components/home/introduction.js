@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '40px'
   },
   title:{
+    fontSize: 40,
     fontWeight: 'bold',
     paddingBottom: '30px'
 
@@ -20,14 +21,15 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 800,
   },
   button:{
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+    marginTop: theme.spacing(7.5),
+    borderRadius: 10,
     padding: 15,  
     backgroundColor: '#312927',
     color: '#FFFFFF',
   },
   img: {
-    maxWidth: 700,
+    width: "100%",
+    maxWidth: 700
   }, 
 }));
 
@@ -44,7 +46,7 @@ export default function Introduction() {
           spacing={10}
       >
         <Grid item align="center">
-        <Typography className={classes.title} variant = "h3" gutterBottom>
+        <Typography className={classes.title} gutterBottom>
           Welcome to UMass Robotics!
         </Typography>
         <Typography className={classes.text} variant = 'body1' gutterBottom>
@@ -62,8 +64,8 @@ export default function Introduction() {
           workplace environment. UMass Robotics is an amazing place for students of
           all experience levels, and we hope to see you on the team!
         </Typography>
-        <Button className={classes.button} variant='contained'>
-        Learn More About Us
+        <Button className={classes.button} variant='contained' href='meet-the-team'>
+        MEET THE TEAM
         </Button>
       </Grid>
       <Grid item>

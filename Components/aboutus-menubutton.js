@@ -14,6 +14,9 @@ menubar: {
   },
 root: {
     color: 'white',
+    '&:hover': {
+      color: "#9A1E1E"
+   },
     fontWeight: 'bold',
     fontSize: 15,
     height: 60,
@@ -21,6 +24,9 @@ root: {
   },
 menu_button: {
   color: 'white',
+  '&:hover': {
+    color: "#9A1E1E"
+ },
   fontWeight: 'bold',
   fontSize: 12,
   height: 60,
@@ -60,7 +66,7 @@ export default function MouseOverPopover() {
           className={classes.menubar}
         >
           <Link href='/meet-the-team'>
-            <Button className={classes.menu_button}>MEET THE TEAM</Button>
+            <Button className={classes.menu_button} height={20}>MEET THE TEAM</Button>
           </Link>
           <Link href='nasa-lunabotics-2020-2021'>
             <Button className={classes.menu_button}>NASA LUNABOTICS 2020-2021</Button>

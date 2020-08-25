@@ -24,14 +24,14 @@ const tutorialSteps = [
   },
   {
     label: 'Lunabotics',
-    imgPath: 'LunaboticsLogo.png',
+    imgPath: 'NewLunaboticsLogo.png',
     //href:
   },
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxHeight: 600,
+
     flexGrow: 1,
     background: //"#9A1E1E"
     '#2C2C2C'
@@ -48,7 +48,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent:'center'
   },
   img: {
-    height: 500,
+    height: 400,
+    [theme.breakpoints.down('xs')]: {
+      height: 300
+    },
     display: 'block',
     overflow: 'hidden',
     padding: '0 0 20px'

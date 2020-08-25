@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
       gridGap: theme.spacing(3),
     },
     link:{
-      color:'white',
+      color:'transparent',
       textdecoration: 'none'
     }
   }));
@@ -54,6 +54,7 @@ const QuickFacts = () => {
              </Fade>
             </a>
         </Grid>
+        
         <Grid item xs={5}>
             <a className={classes.link} href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1'>
               <Fade right>
@@ -65,7 +66,7 @@ const QuickFacts = () => {
               </Fade>
             </a>
         </Grid>
-
+        
         <Grid item xs={5}>
           <Fade left>
             <QuickFactTile
