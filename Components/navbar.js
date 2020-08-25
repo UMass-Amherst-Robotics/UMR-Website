@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   menu_button: {
     color: 'white',
     '&:hover': {
+      backgroundColor: 'transparent',
       color: "#9A1E1E"
    },
     fontWeight: 'bold',
