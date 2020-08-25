@@ -103,7 +103,7 @@ export default function Contact() {
             -NASA
             </Box>
             <Box component="div" display="inline" className={classes.logo}>
-              <img width="90%" src={'LunaboticsLogo.png'} />
+              <img width="90%" src={'NEWLunaboticsLogo.png'} />
             </Box>
             
             <Box component="div" display="inline" className={classes.robot}>

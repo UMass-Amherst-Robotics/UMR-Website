@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
     height: "80px",
-    background: "white"
+    background: "white",
+    marginBottom: 11
   },
   menubar: {
     backgroundColor: '#2C2C2C',
@@ -35,9 +36,27 @@ const useStyles = makeStyles((theme) => ({
   },
   menu_button: {
     color: 'white',
+    '&:hover': {
+      color: "#9A1E1E"
+   },
     fontWeight: 'bold',
     fontSize: 15,
     height: 60,
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
+  },
+  apply_button: {
+    borderRadius: 10,
+    color: '#9A1E1E',
+    backgroundColor: 'white',
+    '&:hover': {
+      backgroundColor: "#9A1E1E",
+      color: 'white'
+   },
+    fontWeight: 'bold',
+    fontSize: 15,
+    width: 90,
+    height: 30,
     marginLeft: theme.spacing(3),
     marginRight: theme.spacing(3),
   }
@@ -49,7 +68,7 @@ const theme = createMuiTheme({
       xs: 0,
       sm: 575,
       md: 825,
-      lg: 900,
+      lg: 975,
       xl: 1200
     }
   }
@@ -83,13 +102,14 @@ const Navbar = () => {
               <Hidden mdDown>
               <a href='/'><img src="./umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
               <Button className={classes.menu_button} color="inherit" href='/'>HOME</Button>
-              <AboutUsMenuButton />
+              <AboutUsMenuButton/>
               <Button className={classes.menu_button} color="inherit" href='/contact'>CONTACT</Button>
               <Button className={classes.menu_button} color="inherit" href='/apply'>APPLY</Button>
               <Link href='/sponsors'>
                 <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
               </Link>
               <Button className={classes.menu_button} color="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1' target='_blank'>DONATE</Button>
+              <Button className={classes.apply_button} color="inhereit" href='/apply' target='_blank'>APPLY</Button>
               </Hidden>
             </Grid>
       </Toolbar>
