@@ -1,30 +1,7 @@
 import React from 'react';
 import Navbar from './../Components/navbar.js'
-import Body from './../Components/body.js'
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField'
-import FormControl from '@material-ui/core/FormControl'
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: 40,
-    flexGrow: 1,
-  },
-  title:{
-    fontWeight: 'bold',
-    fontSize: 60,
-    textAlign: 'left',
-    color: '#9A1E1E',
-  },
-  textField: {
-    width: '25ch',
-  },
-  margin: {
-    margin: theme.spacing(1),
-  }
-}));
+import Body from './../Components/home/body.js'
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
 export default function Contact() {
   const classes = useStyles();

@@ -5,7 +5,7 @@ const useStyles = makeStyles({
   Text: {
     position: 'relative',
     backgroundColor: 'transparent',
-    color:'#737373',
+    color:'white',
     fontFamily: 'Arial',
     fontWeight: 'Bold',
     fontSize: 12,
