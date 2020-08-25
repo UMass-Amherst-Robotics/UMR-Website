@@ -15,6 +15,7 @@ menubar: {
 root: {
     color: 'white',
     '&:hover': {
+      backgroundColor: "transparent",
       color: "#9A1E1E"
    },
     fontWeight: 'bold',
@@ -25,6 +26,7 @@ root: {
 menu_button: {
   color: 'white',
   '&:hover': {
+    backgroundColor: "transparent",
     color: "#9A1E1E"
  },
   fontWeight: 'bold',
