@@ -10,8 +10,9 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: 40,
+    padding: theme.spacing(2),
     flexGrow: 1,
+
   },
   title:{
     fontWeight: 'bold',
@@ -20,13 +21,14 @@ const useStyles = makeStyles((theme) => ({
     color: '#9A1E1E',
   },
   subTitle:{
-    fontSize: 20
+    fontSize: 20,
+    textAlign: 'left'
   },
   questions: {
     fontSize: 18
   },
   textField: {
-    width: '50ch',
+    width: '100ch',
     paddingBottom: '30px',
   },
   button: {
@@ -35,6 +37,8 @@ const useStyles = makeStyles((theme) => ({
     padding: 15,
     backgroundColor: '#312927',
     color: '#FFFFFF',
+    width: '30ch',
+    
   },
   margin: {
     margin: theme.spacing(1),
@@ -81,7 +85,7 @@ export default function Contact() {
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   How did you hear about the UMASS Robotics team?</Typography>
                   <TextField className={classes.textField} id="standard-multiline-flexible" multiline/>
-                  <Button className={classes.button} variant='contained' href='/meet-the-team' >
+                  <Button className={classes.button} variant='contained' >
                   Submit Application
                   </Button>
                 </FormControl>
