@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 import Navbar from './../Components/navbar.js'
-<<<<<<< HEAD
-import Body from './../Components/home/body.js'
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-=======
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField'
@@ -15,21 +11,23 @@ import axios from 'axios';
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: 50,
-    width: '40%',
-    marginLeft: '30%',
-    marginRight: '30%',
+    width: '80%',
+    maxWidth: '700px',
+    margin: 'auto',
+    //marginLeft: '30%',
+    //marginRight: '30%',
   },
   button:{
     marginLeft: '42%',
     marginBottom: 50,
-    padding: 15,  
+    padding: 15,
     backgroundColor: '#312927',
     color: '#FFFFFF',
   },
   badButton:{
     marginLeft: '42%',
     marginBottom: 50,
-    padding: 15,  
+    padding: 15,
     backgroundColor: '#50e78e',
     color: '#303030',
   },
@@ -50,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
     },
   }
 }));
->>>>>>> e4d9886e5f98fde6f46ab8b39897132028bf49a5
 
 export default function Contact() {
   const classes = useStyles();
@@ -80,17 +77,17 @@ export default function Contact() {
             <Typography className={classes.title} variant = "h1" gutterBottom>Contact</Typography>
             <form noValidate autoComplete="off">
               <div className={classes.margin}>
-                <TextField 
-                  className={classes.textField} 
-                  id="standard-full-width" 
+                <TextField
+                  className={classes.textField}
+                  id="standard-full-width"
                   label="First Name"
                   onChange={(e) => {setContent({firstName: e.target.value, lastName: content.lastName, email: content.email, subject: content.subject, message: content.message})}}
                 />
-                <TextField 
-                  fullWidth 
-                  className={classes.textField} 
-                  id="standard-full-width" 
-                  label="Last Name" 
+                <TextField
+                  fullWidth
+                  className={classes.textField}
+                  id="standard-full-width"
+                  label="Last Name"
                   onChange={(e) => {setContent({firstName: content.firstName, lastName: e.target.value, email: content.email, subject: content.subject, message: content.message})}}
                 />
               </div>
@@ -117,7 +114,7 @@ export default function Contact() {
                 onChange={(e) => {setContent({firstName: content.firstName, lastName: content.lastName, email: content.email, subject: content.subject, message: e.target.value})}}
               />
             </form>
-            <Button className={submitted ? classes.badButton : classes.button} variant="contained" onClick={() => {submitEmail(content)}}> 
+            <Button className={submitted ? classes.badButton : classes.button} variant="contained" onClick={() => {submitEmail(content)}}>
               Submit
             </Button>
         </div>
