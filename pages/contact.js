@@ -84,7 +84,7 @@ export default function Contact() {
     }
     else {
       if(!ValidateEmail(content['email']) && content['email']){
-        return alert('Please enter a valid email address you fucking dumbass')
+        return alert('Please enter a valid email address')
       }
       return alert('All fields must be filled.')
     }
@@ -139,10 +139,11 @@ export default function Contact() {
                 className={classes.textField}
                 label="Message"
                 fullWidth
+                multiline
                 onChange={(e) => {setContent({firstName: content.firstName, lastName: content.lastName, email: content.email, subject: content.subject, message: e.target.value})}}
               />
             </form>
-            <Button className={submitted ? classes.badButton : classes.button} variant="contained" onClick={() => {handleSubmit(content)}}>
+            <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(content)}}>
               Submit
             </Button>
           </div>
