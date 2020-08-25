@@ -11,23 +11,27 @@ import axios from 'axios';
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: 50,
-    width: '40%',
-    marginLeft: '30%',
-    marginRight: '30%',
+    width: '80%',
+    maxWidth: '700px',
+    margin: 'auto',
+
+    '& label.Mui-focused': {
+      color: '#9A1E1E',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: '#9A1E1E',
+    },
   },
   button:{
     marginLeft: '42%',
     marginBottom: 50,
     padding: 15,
     backgroundColor: '#312927',
-    color: '#FFFFFF',
-  },
-  badButton:{
-    marginLeft: '42%',
-    marginBottom: 50,
-    padding: 15,
-    backgroundColor: '#50e78e',
-    color: '#303030',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: "#9A1E1E",
+      color: 'white',
+    },
   },
   title:{
     fontWeight: 'bold',
@@ -60,7 +64,7 @@ export default function Contact() {
           // Overwrite Axios's automatically set Content-Type
           'Content-Type': 'application/json'
         }
-      }).then((repsonse) => {
+      }).then((response) => {
         setSubmitted(true);
         alert('Message received. Thank you! We will try to get back to you as soon as possible.')
       }, (error) => {
@@ -80,7 +84,7 @@ export default function Contact() {
     }
     else {
       if(!ValidateEmail(content['email']) && content['email']){
-        return alert('Please enter a valid email adress you fucking dumbass')
+        return alert('Please enter a valid email address you fucking dumbass')
       }
       return alert('All fields must be filled.')
     }
