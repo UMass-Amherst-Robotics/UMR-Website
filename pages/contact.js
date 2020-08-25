@@ -50,12 +50,12 @@ const useStyles = makeStyles((theme) => ({
 export default function Contact() {
   const classes = useStyles();
   const [submitted, setSubmitted] = useState(false);
-  const [content, setContent] = useState({fistName: '', lastName: '', email: '', subject: '', message: ''})
+  const [content, setContent] = useState({firstName: '', lastName: '', email: '', subject: '', message: ''})
 
   // Description: Function that will make post request to server with contact information to then be exported to the umassrobotics email address.
   async function submitEmail(data){
       const json = JSON.stringify(data);
-      const res = await axios.post('http://127.0.0.1:5000/data/', json, {
+      const res = await axios.post('http://127.0.0.1:5000/contact/', json, {
         headers: {
           // Overwrite Axios's automatically set Content-Type
           'Content-Type': 'application/json'
