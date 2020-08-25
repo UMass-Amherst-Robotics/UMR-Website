@@ -137,42 +137,42 @@ export default function Apply() {
                     className={classes.textField}
                     id="standard-full-width"
                     label="First Name"
-                    onChange={(e) => {setApplication({fName: e.target.value, lName: application.lName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                    onChange={(e) => {setApplication({firstName: e.target.value, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   />
                   <TextField
                     fullWidth
                     className={classes.textField}
                     id="standard-full-width"
                     label="Last Name"
-                    onChange={(e) => {setApplication({fName: application.fName, lName: e.target.value, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                    onChange={(e) => {setApplication({firstName: application.firstName, lastName: e.target.value, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   />
                   <TextField
                     fullWidth
                     className={classes.textField}
                     id="standard-full-width"
                     label="Email"
-                    onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: e.target.value, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                    onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: e.target.value, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   />
                   <TextField
                     fullWidth
                     className={classes.textField}
                     id="standard-full-width"
                     label="Current Major"
-                    onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: e.target.value, expGrad: application.expGrad, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                    onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: e.target.value, expGrad: application.expGrad, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   />
                   <TextField
                     fullWidth
                     className={classes.textField}
                     id="standard-full-width"
                     label="Expected Graduation Date"
-                    onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: application.major, expGrad: e.target.value, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                    onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: e.target.value, GorU: application.GorU, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   />
                   <TextField
                     fullWidth
                     className={classes.textField}
                     id="standard-full-width"
                     label="Graduate / Undergraduate"
-                    onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                    onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne:  application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   />
                 </div>
 
@@ -180,7 +180,7 @@ export default function Apply() {
                   Why do you want to join this team? What are some of the
                   reasons you are interested in robotics?</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne:  e.target.value, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne:  e.target.value, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
                   />
 
@@ -188,7 +188,7 @@ export default function Apply() {
                   How do you work in a team? Would you rather work in a larger
                   or small group.</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo:  e.target.value, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo:  e.target.value, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
                   />
 
@@ -198,7 +198,7 @@ export default function Apply() {
                   What skills do you think you could bring to this team? (These
                   skills do not have to be robotics related)</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree:  e.target.value, qFour: application.qFour, qFive: application.qFive})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree:  e.target.value, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
                   />
 
@@ -207,7 +207,7 @@ export default function Apply() {
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   How did you hear about the UMASS Robotics team?</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour:  e.target.value, qFive: application.qFive})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour:  e.target.value, qFive: application.qFive})}}
                   multiline
                   />
 
@@ -216,7 +216,7 @@ export default function Apply() {
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   What technologies have you used and are comfortable with?</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
                   multiline
                   />
 
