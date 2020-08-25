@@ -66,11 +66,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Apply() {
   const classes = useStyles();
-<<<<<<< HEAD
-  const [application, setApplication] = useState({firstName: '', lastName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
-=======
-  const [application, setApplication] = useState({firstName: '' , lastName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
->>>>>>> 5256ef7e90d6cb9848c05edd481d727a300f445e
+  const [submitted, setSubmitted] = useState(null)
+  const [application, setApplication] = useState({fName: '' , lName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
 
   // Description: Function that will make post request to server with contact information to then be exported to the umassrobotics email address.
   async function submitEmail(data){
@@ -80,8 +77,39 @@ export default function Apply() {
           // Overwrite Axios's automatically set Content-Type
           'Content-Type': 'application/json'
         }
+      }).then((response) => {
+        setSubmitted(true);
+        alert('Message received. Thank you! We will try to get back to you as soon as possible.')
+      }, (error) => {
+        setSubmitted(false);
+        alert('Message not received. Please try again later.')
       });
   }
+
+  // Description: checks if all fields are correctly written first before sending request to email server
+  function handleSubmit(application){
+    if (application['fName'] && application['lName'] && application['email'] && application['major'] && application['expGrad'] && application['GorU'] && application['qOne'] && application['qTwo'] && application['qThree'] && application['qFour'] && application['qFive'] && ValidateEmail(application['email'])){
+      submitEmail(application)
+    }
+    else {
+      if(!ValidateEmail(application['email']) && application['email']){
+        return alert('Please enter a valid email address')
+      }
+      return alert('All fields must be filled.')
+    }
+  }
+
+  function ValidateEmail(mail){
+    if (mail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
+      return (true)
+    }
+    return (false)
+  }
+
+  function resetForm(){
+    setApplication({fName: '' , lName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
+  }
+
   return (
     <body style={{margin: "0"}}>
       <div>
@@ -91,14 +119,14 @@ export default function Apply() {
 
               <Typography className={classes.title} variant = "h1" gutterBottom>Apply</Typography>
               <Typography className={classes.subTitle} variant = "h5" gutterBottom>
-              Thank you so much for your interest in UMass Robotics! We are actively searching for new members to add to the team in all kinds of areas. 
-              UMass Robotics is a rigorous team of hardworking engineers dedicated towards competing and winning nation-wide competitions for robotics, machine-learning, and much more. 
+              Thank you so much for your interest in UMass Robotics! We are actively searching for new members to add to the team in all kinds of areas.
+              UMass Robotics is a rigorous team of hardworking engineers dedicated towards competing and winning nation-wide competitions for robotics, machine-learning, and much more.
               Make no mistake, this team is a serious time commitment. That being said, having fun is one of our top priorities! We encourage you to apply if you believe you are up for the commitment
               and look forward to reading your application.
               <br/>
               <br/>
               Please respond to the following questions in complete sentences.
-              Make sure to include any details you believe are of relevance and importance. 
+              Make sure to include any details you believe are of relevance and importance.
               (Please write about a paragraph per response)</Typography>
 
               <form className = {classes.form} noValidate autoComplete="off">
@@ -184,7 +212,7 @@ export default function Apply() {
                   />
 
 
-                  
+
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   What technologies have you used and are comfortable with?</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
@@ -193,7 +221,7 @@ export default function Apply() {
                   />
 
 
-                  <Button className={classes.button} variant="contained" onClick={() => {submitEmail(application)}} >
+                  <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(application)}} >
                   Submit Application
                   </Button>
                  </FormControl>
