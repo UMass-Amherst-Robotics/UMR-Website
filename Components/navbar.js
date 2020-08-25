@@ -69,7 +69,7 @@ const theme = createMuiTheme({
       xs: 0,
       sm: 575,
       md: 825,
-      lg: 975,
+      lg: 1000,
       xl: 1200
     }
   }
@@ -109,7 +109,7 @@ const Navbar = () => {
                 <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
               </Link>
               <Button className={classes.menu_button} color="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1' target='_blank'>DONATE</Button>
-              <Button className={classes.apply_button} color="inhereit" href='/apply' target='_blank'>APPLY</Button>
+              <Button className={classes.apply_button} color="inhereit" href='/apply'>APPLY</Button>
               </Hidden>
             </Grid>
       </Toolbar>

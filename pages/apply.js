@@ -8,12 +8,21 @@ import FormControl from '@material-ui/core/FormControl'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: 50,
+    maxWidth: "1000px",
     width: '80%',
     margin: 'auto',
+    '& label.Mui-focused': {
+      color: '#9A1E1E',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: '#9A1E1E',
+    },
   },
   title:{
     fontWeight: 'bold',
@@ -33,12 +42,16 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   button: {
+    borderRadius: 10,
+    backgroundColor: '#9A1E1E',
+    '&:hover': {
+      backgroundColor: '#2C2C2C',
+   },
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
     padding: 15,
-    backgroundColor: '#312927',
     color: '#FFFFFF',
-    width: '30ch',
+    width: '25ch',
   },
   form:{
     paddingTop: 50,
@@ -48,16 +61,19 @@ const useStyles = makeStyles((theme) => ({
     width: '90%'
 
   },
-  margin: {
-    '& .MuiTextField-root': {
-
-      marginRight: '1%',
-    },
-  },
   horizontalAlignment: {
     '& .MuiTextField-root': {
-      width: '32%',
-      marginRight: '1%',
+      width: '49%',
+      "&:nth-child(odd)": {
+        marginRight: '2%'
+      },
+      "&:nth-child(even)": {
+        marginRight: 0
+      },
+      [theme.breakpoints.down('xs')]: {
+        width: '100%',
+        marginRight: 0
+      },
     },
     paddingBottom: 50
   }
@@ -92,13 +108,13 @@ export default function Apply() {
               and look forward to reading your application.
               <br/>
               <br/>
-              Please respond to the following questions in complete sentences.
+              Please  upload a copy of your resume, and respond to the following questions in complete sentences.
               Make sure to include any details you believe are of relevance and importance. 
               (Please write about a paragraph per response)</Typography>
 
               <form className = {classes.form} noValidate autoComplete="off">
-                 <FormControl fullWidth className={classes.margin}>
-
+                 <FormControl fullWidth>
+                 
                 <div className={classes.horizontalAlignment}>
                   <TextField
                     className={classes.textField}
@@ -153,7 +169,7 @@ export default function Apply() {
 
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   How do you work in a team? Would you rather work in a larger
-                  or small group.</Typography>
+                  or small group?</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
                   onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo:  e.target.value, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
@@ -186,11 +202,9 @@ export default function Apply() {
                   onChange={(e) => {setApplication({fName: application.fName, lName: application.lName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
                   multiline
                   />
-
-
-                  <Button className={classes.button} variant="contained" onClick={() => {submitEmail(application)}} >
-                  Submit Application
-                  </Button>
+                <Button className={classes.button} variant="contained" onClick={() => {submitEmail(application)}} >
+                Submit Application
+                </Button>
                  </FormControl>
               </form>
           </div>
