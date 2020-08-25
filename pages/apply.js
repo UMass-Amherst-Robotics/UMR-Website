@@ -8,10 +8,7 @@ import FormControl from '@material-ui/core/FormControl'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-<<<<<<< HEAD
 import axios from 'axios';
-=======
->>>>>>> 5256ef7e90d6cb9848c05edd481d727a300f445e
 
 const useStyles = makeStyles((theme) => ({
   root: {
