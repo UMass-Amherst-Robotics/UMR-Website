@@ -79,7 +79,7 @@ export default function Contact() {
       submitEmail(content)
     }
     else {
-      if(!ValidateEmail(content['email'])){
+      if(!ValidateEmail(content['email']) && content['email']){
         return alert('Please enter a valid email adress you fucking dumbass')
       }
       return alert('All fields must be filled.')
