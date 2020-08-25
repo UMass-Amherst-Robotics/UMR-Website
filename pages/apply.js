@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './../Components/navbar.js'
 import Body from './../Components/body.js'
+import Body from './../Components/home/body.js'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField'
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#FFFFFF',
     width: '30ch',
     
+
   },
   margin: {
     margin: theme.spacing(1),
