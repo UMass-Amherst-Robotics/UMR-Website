@@ -11,16 +11,12 @@ export default function GoldSponsors() {
 
   const [golds, setGolds] = useState([])
 
-  async function getGold(){
-    await axios.get('http://127.0.0.1:5000/donators/').then(
+  axios.get('http://127.0.0.1:5000/donators/').then(
       (res) => {
         let list = res.data['gold']
         setGolds(list)
       }
     )
-  }
-
-  getGold()
 
   return (
     <div className='gold-container'>
