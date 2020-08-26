@@ -3,8 +3,21 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 575,
+      md: 825,
+      lg: 975,
+      xl: 1660
+    }
+  }
+});
+
+const useStyles = makeStyles(({
   root: {
     flexGrow: 1,
     marginTop: theme.spacing(5),
@@ -13,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: '40px',
   },
   title:{
+    color: "#9A1E1E",
     fontSize: 50,
     fontWeight: 'bold',
     paddingBottom: '10px'
@@ -25,13 +39,21 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3.75),
     borderRadius: 10,
     padding: 15,  
-    backgroundColor: '#312927',
-    color: '#FFFFFF',
+    backgroundColor: '#9A1E1E',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: "#312927",
+    }
   },
   img: {
     width: "100%",
     maxWidth: 700,
-    marginTop: -35
+    [theme.breakpoints.up('xl')]: {
+      marginTop: 0
+    },
+    [theme.breakpoints.down('lg')]: {
+      marginTop: -35
+    },
   }, 
 }));
 
@@ -39,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Introduction() {
   const classes = useStyles();
   return (
+    <MuiThemeProvider theme={theme}>
     <div className={classes.root}>
       <Grid
           container
@@ -75,5 +98,6 @@ export default function Introduction() {
       </Grid>
     </Grid>
     </div>
+    </MuiThemeProvider>
   )
 }
