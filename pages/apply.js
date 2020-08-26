@@ -9,7 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -81,8 +82,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Apply() {
   const classes = useStyles();
-  const [submitted, setSubmitted] = useState(null)
-  const [application, setApplication] = useState({fName: '' , lName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
+  const [application, setApplication] = useState({firstName: '' , lastName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
 
   // Description: Function that will make post request to server with contact information to then be exported to the umassrobotics email address.
   async function submitEmail(data){
@@ -93,17 +93,16 @@ export default function Apply() {
           'Content-Type': 'application/json'
         }
       }).then((response) => {
-        setSubmitted(true);
-        alert('Message received. Thank you! We will try to get back to you as soon as possible.')
+        return router.push('/confirmation')
+
       }, (error) => {
-        setSubmitted(false);
-        alert('Message not received. Please try again later.')
+        return alert('Message not received. Please try again later.')
       });
   }
 
   // Description: checks if all fields are correctly written first before sending request to email server
   function handleSubmit(application){
-    if (application['fName'] && application['lName'] && application['email'] && application['major'] && application['expGrad'] && application['GorU'] && application['qOne'] && application['qTwo'] && application['qThree'] && application['qFour'] && application['qFive'] && ValidateEmail(application['email'])){
+    if (application['firstName'] && application['lastName'] && application['email'] && application['major'] && application['expGrad'] && application['GorU'] && ValidateEmail(application['email'])){
       submitEmail(application)
     }
     else {
@@ -122,7 +121,15 @@ export default function Apply() {
   }
 
   function resetForm(){
-    setApplication({fName: '' , lName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
+    setApplication({firstName: '' , lastName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
+  }
+
+  const router = useRouter();
+
+  function checkRedirect(){
+    if (submitted){
+      router.push('/confirmation')
+    }
   }
 
   return (
@@ -136,22 +143,23 @@ export default function Apply() {
               <Typography className={classes.subTitle} variant = "h5" gutterBottom>
               Thank you so much for your interest in UMass Robotics! We are actively searching for new members to add to the team in all kinds of areas.
               UMass Robotics is a rigorous team of hardworking engineers dedicated towards competing and winning nation-wide competitions for robotics, machine-learning, and much more.
+              <br/>
+              <br/>
               Make no mistake, this team is a serious time commitment. That being said, having fun is one of our top priorities! We encourage you to apply if you believe you are up for the commitment
               and look forward to reading your application.
               <br/>
               <br/>
-<<<<<<< HEAD
-              Please  upload a copy of your resume, and respond to the following questions in complete sentences.
-              Make sure to include any details you believe are of relevance and importance. 
-=======
               Please respond to the following questions in complete sentences.
               Make sure to include any details you believe are of relevance and importance.
->>>>>>> origin
-              (Please write about a paragraph per response)</Typography>
+              (Please write about a paragraph per response)
+              <br/>
+              <br/>
+              You will lose your progress if you leave this page. We suggest writing your answers in another document then copying over.
+              </Typography>
 
               <form className = {classes.form} noValidate autoComplete="off">
-                 <FormControl fullWidth>
-                 
+                <FormControl fullWidth>
+
                 <div className={classes.horizontalAlignment}>
                   <TextField
                     className={classes.textField}
@@ -239,18 +247,11 @@ export default function Apply() {
                   onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
                   multiline
                   />
-<<<<<<< HEAD
-                <Button className={classes.button} variant="contained" onClick={() => {submitEmail(application)}} >
+
+                <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(application)}} >
                 Submit Application
                 </Button>
-=======
-
-
-                  <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(application)}} >
-                  Submit Application
-                  </Button>
->>>>>>> origin
-                 </FormControl>
+                </FormControl>
               </form>
           </div>
       </div>
