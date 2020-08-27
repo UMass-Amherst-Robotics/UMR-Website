@@ -66,16 +66,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Apply() {
   const classes = useStyles();
-<<<<<<< HEAD
   const [application, setApplication] = useState({firstName: '', lastName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
-=======
-  const [application, setApplication] = useState({firstName: '' , lastName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
->>>>>>> 5256ef7e90d6cb9848c05edd481d727a300f445e
 
   // Description: Function that will make post request to server with contact information to then be exported to the umassrobotics email address.
   async function submitEmail(data){
       const json = JSON.stringify(data);
-      const res = await axios.post('http://127.0.0.1:5000/apply/', json, {
+      const res = await axios.post('http://umremailbackend-env.eba-3jshmqb4.us-east-2.elasticbeanstalk.com/apply/', json, {
         headers: {
           // Overwrite Axios's automatically set Content-Type
           'Content-Type': 'application/json'
@@ -160,7 +156,7 @@ export default function Apply() {
                   How do you work in a team? Would you rather work in a larger
                   or small group.</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo:  e.target.value, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo:  e.target.value, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
                   />
 
