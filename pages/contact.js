@@ -7,11 +7,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Footer from '../Components/Footer/footer.js'
 import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
 import axios from 'axios';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: 50,
     width: '80%',
+    justify: "center",
     maxWidth: '700px',
     margin: 'auto',
 
@@ -23,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   button:{
+    margin: "auto",
     borderRadius: 10,
-    marginLeft: '42%',
     marginBottom: 50,
     width: 100,
     padding: 15,
@@ -147,9 +149,11 @@ export default function Contact() {
                 onChange={(e) => {setContent({firstName: content.firstName, lastName: content.lastName, email: content.email, subject: content.subject, message: e.target.value})}}
               />
             </form>
-            <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(content)}}>
-              Submit
-            </Button>
+            <Grid container alignItems="center">
+              <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(content)}}>
+                Submit
+              </Button>
+            </Grid>
           </div>
         <Footer />
       </div>

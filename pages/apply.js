@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: '#2C2C2C',
    },
+    margin: "auto",
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
     padding: 15,
@@ -249,10 +250,11 @@ export default function Apply() {
                   onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
                   multiline
                   />
-                  
-                  <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(application)}} >
-                  {clickedSubmit ? "Loading ..." : "Submit Application"}
-                  </Button>
+                  <Grid container alignItems="center">
+                    <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(application)}} >
+                    {clickedSubmit ? "Loading ..." : "Submit Application"}
+                    </Button>
+                  </Grid>
                  </FormControl>
               </form>
           </div>

@@ -52,6 +52,7 @@ const useStyles = makeStyles({
     [theme.breakpoints.down('xs')]: {
       height: 400,
     },
+    cursor: "default"
   },
   bodyHeight: {
     [theme.breakpoints.up('sm')]: {
@@ -66,18 +67,7 @@ const useStyles = makeStyles({
     [theme.breakpoints.up('xl')]: {
       height: 200,
     },
-    
-    /*
-    [theme.breakpoints.down('md')]: {
-      height: 260,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 210,
-    },
-    [theme.breakpoints.down('xs')]: {
-      height: 150,
-    }
-    */
+    cursor: "default"
   },
 });
 
@@ -88,14 +78,14 @@ const styles = {
   },
   icon: {
     fontSize: 50,
-  },
+  }
 };
 
 export default function MediaCard(props) {
   const classes = useStyles();
   return (
     <MuiThemeProvider theme={theme}>
-    <Card style={{backgroundColor: "#ffffff"}}>
+    <Card cursor="default" className={classes.card}>
       <CardActionArea>
         <CardMedia
           className={classes.imageHeight}
@@ -121,12 +111,8 @@ export default function MediaCard(props) {
       </CardActionArea>
       <CardActions>
         <Box mx="auto">
-          <IconButton color="primary" href={props.linkedIn} target="_blank">
-            <LinkedInIcon style={styles.icon}></LinkedInIcon>
-          </IconButton>
-          <IconButton href={props.gitHub} target="_blank">
-            <GitHubIcon color="secondary" style={styles.icon}/>
-          </IconButton>
+          {props.linkedInIcon}
+          {props.gitHubIcon}
         </Box>
       </CardActions>
     </Card>
