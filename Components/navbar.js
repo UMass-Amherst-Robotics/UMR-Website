@@ -19,8 +19,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
     height: "80px",
-    background: "white",
-    marginBottom: 11
+    background: "white"
   },
   menubar: {
     backgroundColor: '#2C2C2C',
