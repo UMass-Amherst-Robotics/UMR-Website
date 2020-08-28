@@ -140,13 +140,8 @@ export default function Apply() {
               and look forward to reading your application.
               <br/>
               <br/>
-<<<<<<< HEAD
-              Please  upload a copy of your resume, and respond to the following questions in complete sentences.
-              Make sure to include any details you believe are of relevance and importance. 
-=======
               Please respond to the following questions in complete sentences.
               Make sure to include any details you believe are of relevance and importance.
->>>>>>> origin
               (Please write about a paragraph per response)</Typography>
 
               <form className = {classes.form} noValidate autoComplete="off">
@@ -239,17 +234,9 @@ export default function Apply() {
                   onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
                   multiline
                   />
-<<<<<<< HEAD
-                <Button className={classes.button} variant="contained" onClick={() => {submitEmail(application)}} >
-                Submit Application
-                </Button>
-=======
-
-
                   <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(application)}} >
                   Submit Application
                   </Button>
->>>>>>> origin
                  </FormControl>
               </form>
           </div>
