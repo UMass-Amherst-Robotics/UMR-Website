@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     height: 400,
+    paddingTop: "11px",
     [theme.breakpoints.down('xs')]: {
       height: 300
     },

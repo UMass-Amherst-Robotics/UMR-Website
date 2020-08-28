@@ -235,8 +235,7 @@ export default function Apply() {
                   onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
                   multiline
                   />
-
-
+                  
                   <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(application)}} >
                   Submit Application
                   </Button>
