@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import axios from 'axios';
-
+import { useRouter } from 'next/router';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -82,8 +82,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Apply() {
   const classes = useStyles();
-  const [submitted, setSubmitted] = useState(null)
-  const [application, setApplication] = useState({fName: '' , lName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
+  const [application, setApplication] = useState({firstName: '' , lastName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
 
   // Description: Function that will make post request to server with contact information to then be exported to the umassrobotics email address.
   async function submitEmail(data){
@@ -94,11 +93,10 @@ export default function Apply() {
           'Content-Type': 'application/json'
         }
       }).then((response) => {
-        setSubmitted(true);
-        alert('Message received. Thank you! We will try to get back to you as soon as possible.')
+        return router.push('/confirmation')
+
       }, (error) => {
-        setSubmitted(false);
-        alert('Message not received. Please try again later.')
+        return alert('Message not received. Please try again later.')
       });
   }
 
@@ -123,7 +121,15 @@ export default function Apply() {
   }
 
   function resetForm(){
-    setApplication({fName: '' , lName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
+    setApplication({firstName: '' , lastName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
+  }
+
+  const router = useRouter();
+
+  function checkRedirect(){
+    if (submitted){
+      router.push('/confirmation')
+    }
   }
 
   return (
@@ -137,6 +143,8 @@ export default function Apply() {
               <Typography className={classes.subTitle} variant = "h5" gutterBottom>
               Thank you so much for your interest in UMass Robotics! We are actively searching for new members to add to the team in all kinds of areas.
               UMass Robotics is a rigorous team of hardworking engineers dedicated towards competing and winning nation-wide competitions for robotics, machine-learning, and much more.
+              <br/>
+              <br/>
               Make no mistake, this team is a serious time commitment. That being said, having fun is one of our top priorities! We encourage you to apply if you believe you are up for the commitment
               and look forward to reading your application.
               <br/>
@@ -146,8 +154,8 @@ export default function Apply() {
               (Please write about a paragraph per response. Additionally, this website does not save your progress so be sure to use a seperate program and paste your answers in.)</Typography>
 
               <form className = {classes.form} noValidate autoComplete="off">
-                 <FormControl fullWidth>
-                 
+                <FormControl fullWidth>
+
                 <div className={classes.horizontalAlignment}>
                   <TextField
                     className={classes.textField}
