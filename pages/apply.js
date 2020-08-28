@@ -82,8 +82,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Apply() {
   const classes = useStyles();
+  const [clickedSubmit, setClickedSubmitted] = useState(false);
   const [application, setApplication] = useState({firstName: '' , lastName: '', email: '', major: '', expGrad: '', GorU: '', qOne: '', qTwo: '', qThree: '', qFour: '', qFive: ''})
-
   // Description: Function that will make post request to server with contact information to then be exported to the umassrobotics email address.
   async function submitEmail(data){
       const json = JSON.stringify(data);
@@ -93,22 +93,27 @@ export default function Apply() {
           'Content-Type': 'application/json'
         }
       }).then((response) => {
+        setClickedSubmitted(false)
         return router.push('/confirmation')
 
       }, (error) => {
+        setClickedSubmitted(false)
         return alert('Message not received. Please try again later.')
       });
   }
 
   // Description: checks if all fields are correctly written first before sending request to email server
   function handleSubmit(application){
+    setClickedSubmitted(true)
     if (application['firstName'] && application['lastName'] && application['email'] && application['major'] && application['expGrad'] && application['GorU'] && application['qOne'] && application['qTwo'] && application['qThree'] && application['qFour'] && application['qFive'] && ValidateEmail(application['email'])){
       submitEmail(application)
     }
     else {
       if(!ValidateEmail(application['email']) && application['email']){
+        setClickedSubmitted(false)
         return alert('Please enter a valid email address')
       }
+      setClickedSubmitted(false)
       return alert('All fields must be filled.')
     }
   }
@@ -117,6 +122,7 @@ export default function Apply() {
     if (mail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
       return (true)
     }
+    setClickedSubmitted(false)
     return (false)
   }
 
@@ -245,7 +251,7 @@ export default function Apply() {
                   />
                   
                   <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(application)}} >
-                  Submit Application
+                  {clickedSubmit ? "Loading ..." : "Submit Application"}
                   </Button>
                  </FormControl>
               </form>
