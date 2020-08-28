@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import axios from 'axios';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -87,7 +88,7 @@ export default function Apply() {
   // Description: Function that will make post request to server with contact information to then be exported to the umassrobotics email address.
   async function submitEmail(data){
       const json = JSON.stringify(data);
-      const res = await axios.post('http://127.0.0.1:5000/apply/', json, {
+      const res = await axios.post('http://umremailbackend-env.eba-3jshmqb4.us-east-2.elasticbeanstalk.com/apply/', json, {
         headers: {
           // Overwrite Axios's automatically set Content-Type
           'Content-Type': 'application/json'
@@ -103,7 +104,7 @@ export default function Apply() {
 
   // Description: checks if all fields are correctly written first before sending request to email server
   function handleSubmit(application){
-    if (application['fName'] && application['lName'] && application['email'] && application['major'] && application['expGrad'] && application['GorU'] && application['qOne'] && application['qTwo'] && application['qThree'] && application['qFour'] && application['qFive'] && ValidateEmail(application['email'])){
+    if (application['firstName'] && application['lastName'] && application['email'] && application['major'] && application['expGrad'] && application['GorU'] && application['qOne'] && application['qTwo'] && application['qThree'] && application['qFour'] && application['qFive'] && ValidateEmail(application['email'])){
       submitEmail(application)
     }
     else {
@@ -142,7 +143,7 @@ export default function Apply() {
               <br/>
               Please respond to the following questions in complete sentences.
               Make sure to include any details you believe are of relevance and importance.
-              (Please write about a paragraph per response)</Typography>
+              (Please write about a paragraph per response. Additionally, this website does not save your progress so be sure to use a seperate program and paste your answers in.)</Typography>
 
               <form className = {classes.form} noValidate autoComplete="off">
                  <FormControl fullWidth>
@@ -203,7 +204,7 @@ export default function Apply() {
                   How do you work in a team? Would you rather work in a larger
                   or small group?</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo:  e.target.value, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo:  e.target.value, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
                   />
 
@@ -213,7 +214,7 @@ export default function Apply() {
                   What skills do you think you could bring to this team? (These
                   skills do not have to be robotics related)</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree:  e.target.value, qFour: application.qFour, qFive: application.qFive})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo: application.qTwo, qThree:  e.target.value, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
                   />
 
@@ -222,7 +223,7 @@ export default function Apply() {
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   How did you hear about the UMASS Robotics team?</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour:  e.target.value, qFive: application.qFive})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour:  e.target.value, qFive: application.qFive})}}
                   multiline
                   />
 
@@ -231,9 +232,10 @@ export default function Apply() {
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   What technologies have you used and are comfortable with?</Typography>
                   <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
-                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: e.target.value, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
+                  onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
                   multiline
                   />
+                  
                   <Button className={classes.button} variant="contained" onClick={() => {handleSubmit(application)}} >
                   Submit Application
                   </Button>
