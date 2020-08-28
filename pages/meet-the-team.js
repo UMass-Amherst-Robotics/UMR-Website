@@ -19,6 +19,9 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 850,
     width: "80%"
+  },
+  header: {
+    color: "#9A1E1E"
   }
 });
 
@@ -80,7 +83,7 @@ export default function Team() {
         <Navbar/>
           <Box mx="auto" mb={5} className={classes.root} mt={4}>
             <Box mb={4}>
-              <Typography variant="h3">
+              <Typography variant="h3" className={classes.header}>
                <b> Executive Board</b>
               </Typography>
             </Box>
@@ -96,7 +99,7 @@ export default function Team() {
           </Typography>
           </Box>
           <Box mt={5} mb={4}>
-            <Typography variant="h3">
+            <Typography variant="h3" className={classes.header}>
               <b>Team</b>
             </Typography>
           </Box>

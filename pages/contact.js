@@ -23,14 +23,15 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   button:{
+    borderRadius: 10,
     marginLeft: '42%',
     marginBottom: 50,
+    width: 100,
     padding: 15,
-    backgroundColor: '#312927',
+    backgroundColor: '#9A1E1E',
     color: 'white',
     '&:hover': {
-      backgroundColor: "#9A1E1E",
-      color: 'white',
+      backgroundColor: "#312927",
     },
   },
   title:{
@@ -45,8 +46,11 @@ const useStyles = makeStyles((theme) => ({
   },
   margin: {
     '& .MuiTextField-root': {
-      width: '48%',
-      marginRight: '1%',
+      "&:nth-child(2)": {
+        marginRight: 0
+      },
+      width: '49%',
+      marginRight: '2%',
     },
   }
 }));
