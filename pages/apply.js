@@ -12,6 +12,14 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 
+const theme = createMuiTheme({
+  palette: {
+    secondary: {
+      main: '#9A1E1E'
+    },
+  },
+});
+
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: 50,
@@ -141,6 +149,7 @@ export default function Apply() {
 
   return (
     <body style={{margin: "0"}}>
+      <MuiThemeProvider theme={theme}>
       <div>
         <Navbar/>
 
@@ -210,7 +219,7 @@ export default function Apply() {
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   Why do you want to join this team? What are some of the
                   reasons you are interested in robotics?</Typography>
-                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
+                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" color="secondary" rows={10}
                   onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne:  e.target.value, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
                   />
@@ -218,7 +227,7 @@ export default function Apply() {
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   How do you work in a team? Would you rather work in a larger
                   or small group?</Typography>
-                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
+                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" color="secondary" rows={10}
                   onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo:  e.target.value, qThree: application.qThree, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
                   />
@@ -228,7 +237,7 @@ export default function Apply() {
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   What skills do you think you could bring to this team? (These
                   skills do not have to be robotics related)</Typography>
-                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
+                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" color="secondary" rows={10}
                   onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo: application.qTwo, qThree:  e.target.value, qFour: application.qFour, qFive: application.qFive})}}
                   multiline
                   />
@@ -237,7 +246,7 @@ export default function Apply() {
 
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   How did you hear about the UMASS Robotics team?</Typography>
-                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
+                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" color="secondary" rows={10}
                   onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour:  e.target.value, qFive: application.qFive})}}
                   multiline
                   />
@@ -246,7 +255,7 @@ export default function Apply() {
 
                   <Typography className={classes.questions} variant = "h5" gutterBottom>
                   What technologies have you used and are comfortable with?</Typography>
-                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" rows={15}
+                  <TextField className={classes.textField} id="outlined-multiline-static" variant="outlined" color="secondary" rows={10}
                   onChange={(e) => {setApplication({firstName: application.firstName, lastName: application.lastName, email: application.email, major: application.major, expGrad: application.expGrad, GorU: application.GorU, qOne: application.qOne, qTwo: application.qTwo, qThree: application.qThree, qFour: application.qFour, qFive:  e.target.value})}}
                   multiline
                   />
@@ -259,6 +268,7 @@ export default function Apply() {
               </form>
           </div>
       </div>
+      </MuiThemeProvider>
     </body>
   )
 }
