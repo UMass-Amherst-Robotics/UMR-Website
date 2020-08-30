@@ -10,7 +10,7 @@ import { MuiThemeProvider} from '@material-ui/core/styles';
 import Footer from '../Components/Footer/footer.js'
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import CardIcon from './../Components/CardIcon.js'
+import CardIcon from './../Components/cardIcon.js'
 
 const useStyles = makeStyles({
   root: {
