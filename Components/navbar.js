@@ -95,7 +95,7 @@ const Navbar = () => {
               </IconButton>
               </Hidden>
               <Hidden lgUp>
-                <Box mx="auto">
+                <Box mx="auto" position="relative" left={5}>
                   <a href='/'><img src="./umr-logo-white.png" alt="logo" className={classes.logo} href='/' /></a>
                 </Box>
               </Hidden>
