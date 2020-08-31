@@ -107,6 +107,7 @@ export default function Apply() {
 
       }, (error) => {
         setClickedSubmitted(false)
+        console.log(error);
         return alert('Message not received. Please try again later.')
       });
   }

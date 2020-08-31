@@ -74,6 +74,7 @@ export default function Contact() {
         setSubmitted(true);
         alert('Message received. Thank you! We will try to get back to you as soon as possible.')
       }, (error) => {
+        console.log(error)
         setSubmitted(false);
         alert('Message not received. Please try again later.')
       })
