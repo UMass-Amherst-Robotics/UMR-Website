@@ -96,7 +96,7 @@ export default function Apply() {
   // Description: Function that will make post request to server with contact information to then be exported to the umassrobotics email address.
   async function submitEmail(data){
       const json = JSON.stringify(data);
-      const res = await axios.post('backend/apply/', json, {
+      const res = await axios.post('https://www.umassrobotics-website-backend.com/apply/', json, {
         headers: {
           // Overwrite Axios's automatically set Content-Type
           'Content-Type': 'application/json'

@@ -65,7 +65,7 @@ export default function Contact() {
   // Description: Function that will make post request to server with contact information to then be exported to the umassrobotics email address.
   function submitEmail(data){
       const json = JSON.stringify(data);
-      const res = axios.post('http://umremailbackend-env.eba-3jshmqb4.us-east-2.elasticbeanstalk.com/contact/', json, {
+      const res = axios.post('https://www.umassrobotics-website-backend.com/contact/', json, {
         headers: {
           // Overwrite Axios's automatically set Content-Type
           'Content-Type': 'application/json'
