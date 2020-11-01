@@ -7,12 +7,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
-import Link from 'next/link'
 
 const theme = createMuiTheme({
   palette: {
@@ -103,7 +99,7 @@ export default function MediaCard(props) {
 
           <Typography variant="body2" color="textPrimary" component="p">
             <b>Major:</b> {props.major}<br></br>
-            <b>What I Work On:</b> {props.work}<br></br>
+            {props.work}
             <b>Hobbies:</b> {props.hobbies}<br></br>
             <b>Favorite Dining Hall:</b> {props.diningHall}<br></br>
           </Typography>
