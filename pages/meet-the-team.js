@@ -81,7 +81,9 @@ export default function Team() {
     {name: "Kyle O'Connell", image: "/Profiles/KylePicture.png", major: "Mechanical Engineering", work: "Mechanical design, analysis", hobbies: "Frisbee, music", diningHall: "Hamp", linkedInIcon: icon("https://www.linkedin.com/in/kyle-o-connell-763273175/", linkedInIcon), gitHubIcon: icon("https://github.com/kyleo9918", gitHubIcon)},
     {name: "Andy Gutierrez", image: "/Profiles/GutiPic.png", major: "Computer Engineering", work: "Electronics, programming, website design", hobbies: "Piano, guitar, squash", diningHall: "Berk", linkedInIcon: icon("https://www.linkedin.com/in/andres-gutierrez-8758581a2/", linkedInIcon), gitHubIcon: icon("https://github.com/Andy-Guti", gitHubIcon)},
     {name: "Dillan Wilson", image: "/Profiles/DillanPicture.png", major: "Mechanical Engineering", work: "Chassis design", hobbies: "Running, hockey, table tennis", diningHall: "Hamp", linkedInIcon: icon("https://www.linkedin.com/in/dillan-wilson-2a2116175/", linkedInIcon), gitHubIcon: icon("https://github.com/dillan-wilson", gitHubIcon)},
-    {name: "Emma Thompson", image: "/Profiles/EmmaPic.png", major: "Journalism and Biology", work: "Social media correspondant", hobbies: "Writing, running, drinking coffee", diningHall: "Berk", linkedInIcon: icon("https://www.linkedin.com/in/emma-thompson-5b51b5176", linkedInIcon)}
+    {name: "Emma Thompson", image: "/Profiles/EmmaPic.png", major: "Journalism and Biology", work: "Social media correspondant", hobbies: "Writing, running, drinking coffee", diningHall: "Berk", linkedInIcon: icon("https://www.linkedin.com/in/emma-thompson-5b51b5176", linkedInIcon)},
+    {name: "Millan Taranto", image: "/Profiles/MillanPicture.png", major: "Mechanical Engineering", work: "Mechanical design, analysis", hobbies: "Baseball, cardistry, gaming", diningHall: "Hamp", linkedInIcon: icon("https://www.linkedin.com/in/millan-taranto-6bb543199", linkedInIcon)},
+    
   ]
 
   return (

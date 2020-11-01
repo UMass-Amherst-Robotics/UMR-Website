@@ -59,7 +59,7 @@ const QuickFacts = () => {
             <a className={classes.link} href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1' target="_blank">
               <Fade timeout={2500}>
                 <QuickFactTile
-                  title="1725"
+                  title="1775"
                   text="Dollars Raised"
                   img="/trophy-red.png"
                 />
