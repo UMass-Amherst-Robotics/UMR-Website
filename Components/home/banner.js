@@ -14,7 +14,8 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const tutorialSteps = [
   {
     label: 'Applications',
-    imgPath: 'applications.png'
+    //imgPath: 'applications.png'
+    imgPath: 'UMRBannerLogo.png'
     //href: /apply
   },
   {
