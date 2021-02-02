@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react';
 import Navbar from './../Components/navbar.js'
 import Footer from '../Components/Footer/footer.js'
@@ -51,6 +52,9 @@ export default function Sponsors() {
   const classes = useStyles();
   return (
     <body style={{margin: 0, width:'100%', backgroundColor: "#f5f5f5"}}>
+      <Head>
+        <title>UMass Robotics - Sponsors</title>
+      </Head>
       <MuiThemeProvider theme={theme}>
         <Navbar />
         <Box mx='auto' className={classes.root}>

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react';
 import Navbar from './../Components/navbar.js'
 import Body from './../Components/home/body.js'
@@ -93,6 +94,9 @@ export default function Contact() {
   const classes = useStyles()
   return (
     <body style={{margin: "0", position: "relative"}}>
+      <Head>
+        <title>UMass Robotics - NASA Lunabotics</title>
+      </Head>
       <div>
         <Box className={classes.whitespace}>
         <Box mx="auto" className={classes.root} paddingBottom="150px">

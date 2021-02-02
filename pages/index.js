@@ -11,6 +11,9 @@ import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/sty
 export default function Home() {
   return (
     <body style={{margin: "0"}}>
+      <Head>
+        <title>UMass Robotics</title>
+      </Head>
       <div>
         <Navbar />
 				<Banner />

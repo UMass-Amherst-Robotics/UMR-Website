@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react';
 import Navbar from './../Components/navbar.js'
 import Body from './../Components/home/body.js'
@@ -93,6 +94,9 @@ export default function Team() {
 
   return (
     <body style={{backgroundColor: "#ffffff", margin: 0}}>
+      <Head>
+        <title>UMass Robotics - Meet the Team</title>
+      </Head>
       <MuiThemeProvider theme={theme}>
         <Navbar/>
           <Box mx="auto" mb={5} className={classes.root} mt={4}>

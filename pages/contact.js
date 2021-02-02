@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React, { useState } from 'react';
 import Navbar from './../Components/navbar.js'
 import Button from '@material-ui/core/Button'
@@ -106,6 +107,9 @@ export default function Contact() {
 
   return (
     <body style={{margin: "0"}}>
+      <Head>
+        <title>UMass Robotics - Contact</title>
+      </Head>
       <div>
         <Navbar/>
           <div className={classes.root}>
