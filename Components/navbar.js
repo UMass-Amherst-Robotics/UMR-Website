@@ -108,7 +108,7 @@ const Navbar = () => {
                 <Button className={classes.menu_button} color="inherit">SPONSORS</Button>
               </Link>
               <Button className={classes.menu_button} color="inhereit" href='https://www.gofundme.com/f/umass-robotics?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1' target='_blank'>DONATE</Button>
-              <Button className={classes.apply_button} color="inhereit" href='/apply'>APPLY</Button>
+              <Button className={classes.apply_button} color="inhereit" href='https://forms.gle/fAYZgDoUw859cnnF8' target="_blank">APPLY</Button>
               </Hidden>
             </Grid>
       </Toolbar>
