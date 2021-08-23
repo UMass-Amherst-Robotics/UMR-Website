@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField'
 import { makeStyles } from '@material-ui/core/styles';
 import Footer from '../Components/Footer/footer.js'
-import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 

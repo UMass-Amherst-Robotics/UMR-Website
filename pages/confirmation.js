@@ -3,7 +3,7 @@ import Navbar from './../Components/navbar'
 import Footer from '../Components/Footer/footer'
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Box'
-import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   whitespace: {

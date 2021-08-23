@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import React from 'react';
 import Navbar from './../Components/navbar.js'
-import Body from './../Components/home/body.js'
 import MediaCard from './../Components/Cards/card.js'
 import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
