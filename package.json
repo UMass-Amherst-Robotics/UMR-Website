@@ -13,7 +13,7 @@
     "@material-ui/icons": "^4.9.1",
     "axios": "^0.20.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fontsource-roboto": "^2.1.4",
     "framer-motion": "^2.1.2",
     "micro-form": "^2.0.5",
